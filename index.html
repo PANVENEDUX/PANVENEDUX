@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Consultancy Company</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
         /* Base Styles */
         body {
@@ -18,11 +17,12 @@
             background-color: #003366;
             color: #ffffff;
             padding: 20px;
-        }
-        header .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+        header .branding {
+            flex: 1;
         }
         header h1 {
             margin: 0;
@@ -31,7 +31,9 @@
         }
         nav {
             display: flex;
-            gap: 20px;
+            flex-direction: column;
+            gap: 10px;
+            margin-left: 20px;
         }
         nav a {
             text-decoration: none;
@@ -41,21 +43,20 @@
         nav a:hover {
             text-decoration: underline;
         }
-
-        /* Language Selector */
         .language-selector {
             margin-left: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
         }
         .language-selector a {
             color: #ffffff;
-            margin-left: 15px;
+            margin-bottom: 5px;
             text-decoration: none;
         }
         .language-selector a:hover {
             text-decoration: underline;
         }
-
-        /* Hero Section */
         .hero {
             background: linear-gradient(to bottom, #003366, #00509e);
             color: #ffffff;
@@ -70,8 +71,21 @@
         .hero p {
             font-size: 1.4rem;
         }
-
-        /* Services Section */
+        .about {
+            padding: 50px 20px;
+            background-color: #fafafa;
+            text-align: center;
+        }
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-family: "Georgia", serif;
+            color: #003366;
+        }
+        .about p {
+            font-size: 1.2rem;
+            color: #555;
+        }
         .services {
             padding: 50px 20px;
             background-color: #e0e6ed;
@@ -93,25 +107,6 @@
         .service p {
             text-align: justify;
         }
-
-        /* About Section */
-        .about {
-            padding: 50px 20px;
-            background-color: #fafafa;
-            text-align: center;
-        }
-        .about h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            font-family: "Georgia", serif;
-            color: #003366;
-        }
-        .about p {
-            font-size: 1.2rem;
-            color: #555;
-        }
-
-        /* Contact Section */
         .contact {
             padding: 50px 20px;
             text-align: center;
@@ -126,8 +121,6 @@
             font-size: 1.2rem;
             color: #003366;
         }
-
-        /* Footer */
         footer {
             background-color: #003366;
             color: #ffffff;
@@ -143,51 +136,45 @@
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="branding">
             <h1>Your Consultancy Company</h1>
-            <nav>
-                <a href="#services">Services</a>
-                <a href="#about">About Us</a>
-                <a href="#contact">Contact</a>
-            </nav>
-            <div class="language-selector">
-                <a href="#">English</a>
-                <a href="#">Български</a>
-            </div>
         </div>
+        <div class="language-selector">
+            <a href="#">English</a>
+            <a href="#">Български</a>
+        </div>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
     <div class="hero">
         <h2>Welcome to Your Consultancy Company</h2>
         <p>Providing excellence and tradition for your business growth.</p>
     </div>
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>We are a team of experienced consultants dedicated to helping businesses succeed. Our heritage lies in understanding tradition while driving innovation for the future.</p>
+    </section>
     <section class="services" id="services">
         <div class="service">
             <h3>Business Strategy</h3>
             <p>We analyze your market, identify opportunities, and develop tailored strategies to ensure long-term success and sustainability.</p>
-            <p>Our methodology is rooted in the principles of Harvard Business School, emphasizing data-driven insights and actionable results. We start by conducting a comprehensive market analysis, benchmarking against industry leaders, and identifying your core strengths. With this foundation, we design strategies that align with your company’s mission, ensuring scalability and adaptability in a rapidly evolving global economy.</p>
-            <p>Our team collaborates closely with stakeholders to implement these strategies seamlessly, offering ongoing support and refinement as needed. Whether you're looking to expand your market share, launch a new product, or optimize operations, our approach ensures measurable and sustainable growth.</p>
+            <p>Our methodology is rooted in the principles of Harvard Business School, emphasizing data-driven insights and actionable results.</p>
         </div>
         <div class="service">
             <h3>Marketing Solutions</h3>
             <p>Our team crafts bespoke marketing campaigns that resonate with your target audience and maximize your brand's reach.</p>
-            <p>Leveraging Harvard Business School's cutting-edge frameworks, we focus on customer segmentation, value proposition design, and multi-channel engagement. Our campaigns begin with an in-depth analysis of your audience's behaviors, preferences, and needs. Using this data, we create compelling narratives that build emotional connections and drive brand loyalty.</p>
-            <p>From digital marketing to traditional outreach, our solutions are tailored to amplify your message across platforms. Whether you're entering a new market or revitalizing your brand, our expertise ensures impactful and measurable results.</p>
         </div>
         <div class="service">
             <h3>Financial Consulting</h3>
             <p>Optimize your financial resources with our expertise in budgeting, risk assessment, and revenue growth strategies.</p>
-            <p>Drawing from Harvard's best practices, our financial consulting services focus on maximizing efficiency and profitability. We begin with a thorough financial health assessment, identifying key opportunities to reduce costs, mitigate risks, and enhance revenue streams. By integrating advanced analytics and forecasting techniques, we help you make informed decisions that secure long-term stability and growth.</p>
-            <p>Whether you're navigating mergers and acquisitions, restructuring, or seeking investment opportunities, our tailored solutions empower you to achieve financial excellence. Partner with us to build a resilient financial foundation that supports your strategic goals.</p>
         </div>
         <div class="service">
-            <h3>Real Estate Advisory</h3>
-            <p>Our real estate consultancy services offer comprehensive market analysis, strategic planning, and investment advice tailored to your unique needs. We assist in identifying lucrative opportunities, minimizing risks, and maximizing returns in both commercial and residential markets.</p>
-            <p>Using proven methodologies, we help you navigate property acquisitions, portfolio management, and development projects. Our expert insights ensure that your real estate investments align with your long-term business objectives.</p>
+            <h3>Crypto Consultancy and Financial Accounting</h3>
+            <p>Navigate the complexities of the cryptocurrency market with our expert guidance. We help you leverage blockchain technology and ensure compliance in financial accounting.</p>
         </div>
-    </section>
-    <section class="about" id="about">
-        <h2>About Us</h2>
-        <p>We are a team of experienced consultants dedicated to helping businesses succeed. Our heritage lies in understanding tradition while driving innovation for the future.</p>
     </section>
     <section class="contact" id="contact">
         <h2>Contact Us</h2>
