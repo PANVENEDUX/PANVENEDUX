@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Consultancy Company</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Mario Petrov-Pokrovski Consultancy</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>Welcome to Mario Petrov-Pokrovski Consultancy</h2>
+            <p>Your partner in business growth and success.</p>
+        </section>
+        <section class="overview">
+            <h3>What We Offer</h3>
+            <p>We provide strategic solutions to enhance your business operations, financial performance, and market presence.</p>
+            <a href="services.html" class="btn">Learn More</a>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mario Petrov-Pokrovski Consultancy. All rights reserved.</p>
+            <p>Email: <a href="mailto:panvenedux@gmail.com">panvenedux@gmail.com</a></p>
+        </div>
+    </footer>
+</body>
+</html>
