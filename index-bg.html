@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANVENEDUX: Наследство</title>
+    <style>
+        /* Основни стилове */
+        body {
+            font-family: "Garamond", serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #003366;
+            color: #ffffff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #D4AF37;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-family: "Georgia", serif;
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        nav a:hover {
+            color: #D4AF37;
+        }
+        .hero {
+            background: linear-gradient(to bottom, #003366, #002244);
+            color: #ffffff;
+            text-align: center;
+            padding: 80px 20px;
+            border-bottom: 5px solid #D4AF37;
+        }
+        .hero p {
+            font-size: 2.5rem;
+            font-style: italic;
+        }
+        .heritage, .services {
+            padding: 50px 20px;
+            background-color: #fafafa;
+            max-width: 1200px;
+            margin: auto;
+            border: 2px solid #D4AF37;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .heritage h2, .services h2 {
+            font-size: 2.5rem;
+            color: #003366;
+            border-bottom: 2px solid #D4AF37;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-family: "Georgia", serif;
+        }
+        .heritage p, .services p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.8;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+        .services .service {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            border: 2px solid #D4AF37;
+        }
+        .services .service h3 {
+            font-size: 1.8rem;
+            color: #003366;
+            margin-bottom: 15px;
+        }
+        .services .service p {
+            text-align: justify;
+            line-height: 1.6;
+        }
+        footer {
+            background-color: #003366;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+            border-top: 3px solid #D4AF37;
+        }
+        footer a {
+            color: #D4AF37;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PANVENEDUX</h1>
+        <nav>
+            <a href="#services">Услуги</a>
+            <a href="#about">За нас</a>
+            <a href="#heritage">Наследство</a>
+            <a href="#contact">Контакти</a>
+        </nav>
+    </header>
+    <div class="hero">
+        <p>Тъкане на традиции и съвършенство във вашия бизнес растеж.</p>
+    </div>
+    <section class="services" id="services">
+        <h2>Нашите услуги</h2>
+        <div class="service">
+            <h3>Вътрешна структура на бизнеса</h3>
+            <p>Оптимизирането на вътрешните бизнес структури е от решаващо значение за успеха на организацията. Нашият екип предоставя цялостни одити на текущите ви работни процеси, идентифицирайки неефективности и препоръчвайки решения, съобразени с вашите бизнес цели.</p>
+            <p>Специализираме се в прилагането на рамки, които насърчават гъвкавостта, сътрудничеството и ясната комуникация между отделите. Един от нашите експерти притежава сертификат SAFe (Scaled Agile Framework), който гарантира плавен и ефективен преход към гъвкави методологии.</p>
+            <p>С нашето ръководство вътрешните ви структури ще бъдат проектирани да увеличат производителността, да насърчават иновациите и да създадат устойчива основа за бъдещ растеж.</p>
+        </div>
+        <div class="service">
+            <h3>Бизнес стратегия</h3>
+            <p>Анализираме вашия пазар, идентифицираме възможности и разработваме персонализирани стратегии, които да гарантират дългосрочен успех и устойчивост.</p>
+            <p>Нашите услуги в областта на бизнес стратегията използват водещи в индустрията рамки, гарантирайки структуриран подход към динамиката на пазара.</p>
+            <p>Работим в тясно сътрудничество със заинтересованите страни, за да приведем бизнес целите в действие, като гарантираме, че всяка стратегия е основана на измерими резултати.</p>
+        </div>
+    </section>
+    <section class="heritage" id="heritage">
+        <h2>Нашето наследство</h2>
+        <p>PANVENEDUX черпи своето име и вдъхновение от уважаваното семейство Венедикови в България, известно със своя принос към академичните среди, културата и лидерството.</p>
+        <p>Семейната им отдаденост на знанието и традицията се съгласува напълно с нашата мисия в PANVENEDUX: да изведем вечните ценности, като същевременно движим иновациите за бъдещето.</p>
+    </section>
+    <footer>
+        <p>&copy; 2025 PANVENEDUX. Всички права запазени.</p>
+        <div class="language-selector" style="text-align: center; margin-top: 20px;">
+            <a href="index.html">English</a> | <a href="index-bg.html">Български</a>
+        </div>
+    </footer>
+</body>
+</html>
