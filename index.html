@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Consultancy Company</title>
+    <title>PANVENEDUX: CUM DEUS SUBLIMOR</title>
     <style>
         /* Base Styles */
         body {
-            font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+            font-family: "Garamond", serif;
             margin: 0;
             padding: 0;
             color: #333;
@@ -19,169 +19,128 @@
             padding: 20px;
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
-        }
-        header .branding {
-            flex: 1;
+            align-items: center;
+            border-bottom: 3px solid #D4AF37;
         }
         header h1 {
             margin: 0;
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-family: "Georgia", serif;
-        }
-        .nav-container {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
         }
         nav {
             display: flex;
-            flex-direction: column;
-            gap: 10px;
+            gap: 15px;
         }
         nav a {
             text-decoration: none;
             color: #ffffff;
             font-weight: bold;
+            font-size: 1rem;
         }
         nav a:hover {
-            text-decoration: underline;
-        }
-        .language-selector a {
-            color: #ffffff;
-            margin-bottom: 10px;
-            text-decoration: none;
-        }
-        .language-selector a:hover {
-            text-decoration: underline;
+            color: #D4AF37;
         }
         .hero {
-            background: linear-gradient(to bottom, #003366, #00509e);
+            background: linear-gradient(to bottom, #003366, #002244);
             color: #ffffff;
             text-align: center;
-            padding: 60px 20px;
+            padding: 80px 20px;
+            border-bottom: 5px solid #D4AF37;
         }
         .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 20px;
+            font-size: 3.5rem;
             font-family: "Georgia", serif;
+            margin-bottom: 10px;
+        }
+        .hero h3 {
+            font-size: 1.5rem;
+            font-family: "Garamond", serif;
+            font-weight: normal;
         }
         .hero p {
-            font-size: 1.4rem;
-        }
-        .about {
-            padding: 50px 20px;
-            background-color: #fafafa;
-            text-align: center;
-        }
-        .about h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            font-family: "Georgia", serif;
-            color: #003366;
-        }
-        .about p {
             font-size: 1.2rem;
-            color: #555;
         }
-        .services {
+        .about, .services, .contact {
             padding: 50px 20px;
-            background-color: #e0e6ed;
+            max-width: 1200px;
+            margin: auto;
         }
-        .service {
+        .about h2, .services h2, .contact h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #003366;
+            border-bottom: 2px solid #D4AF37;
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+        .services .service {
             background-color: #ffffff;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            width: 70%;
-            margin: 0 auto 30px;
+            margin-bottom: 30px;
+            border: 2px solid #D4AF37;
         }
-        .service h3 {
-            margin-top: 0;
+        .services .service h3 {
+            font-size: 1.8rem;
             color: #003366;
-            font-family: "Georgia", serif;
+            margin-bottom: 15px;
         }
-        .service p {
+        .services .service p {
             text-align: justify;
-        }
-        .contact {
-            padding: 50px 20px;
-            text-align: center;
-            background-color: #e0e6ed;
-        }
-        .contact h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            font-family: "Georgia", serif;
-        }
-        .contact p {
-            font-size: 1.2rem;
-            color: #003366;
+            line-height: 1.6;
         }
         footer {
             background-color: #003366;
             color: #ffffff;
             text-align: center;
-            padding: 20px 0;
-            margin-top: 20px;
+            padding: 20px;
+            margin-top: 30px;
+            border-top: 3px solid #D4AF37;
         }
         footer a {
-            color: #ffffff;
+            color: #D4AF37;
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="branding">
-            <h1>Your Consultancy Company</h1>
-        </div>
-        <div class="nav-container">
-            <nav>
-                <a href="#services">Services</a>
-                <a href="#about">About Us</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
+        <h1>PANVENEDUX</h1>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
     <div class="hero">
-        <div style="text-align: left;">
-            <h2>Your Consultancy Company</h2>
-            
-        </div>
-        <h2 style="text-align: center;">PANVENEDUX:</h2>
+        <h2>PANVENEDUX</h2>
         <h3>CUM DEUS SUBLIMOR</h3>
         <p>Providing excellence and tradition for your business growth.</p>
     </div>
     <section class="about" id="about">
         <h2>About Us</h2>
-        <p>We are a team of experienced consultants dedicated to helping businesses succeed. Our heritage lies in understanding tradition while driving innovation for the future.</p>
+        <p>At PANVENEDUX, we pride ourselves on delivering timeless consultancy solutions rooted in tradition and designed for the future. Our team of seasoned experts specializes in crafting bespoke strategies tailored to your needs, ensuring innovation and excellence are at the core of everything we do.</p>
     </section>
     <section class="services" id="services">
+        <h2>Our Services</h2>
         <div class="service">
             <h3>Business Strategy</h3>
-            <p>We analyze your market, identify opportunities, and develop tailored strategies to ensure long-term success and sustainability.</p>
-            <p>Our business strategy services utilize industry-leading frameworks, ensuring a structured approach to addressing market dynamics. Whether you're expanding operations or launching a new product, we help you chart a course for success.</p>
-            <p>We work closely with stakeholders to align business objectives with actionable plans, ensuring that each strategy is grounded in measurable outcomes. With our guidance, your organization can achieve sustainable growth and navigate challenges effectively.</p>
+            <p>We help you develop sustainable business strategies that align with your vision and market trends. Our approach combines meticulous research, in-depth analysis, and actionable recommendations to position your business for long-term success.</p>
+            <p>With a focus on innovation and adaptability, our business strategy services ensure your organization is equipped to tackle challenges and seize opportunities in an ever-changing landscape.</p>
+            <p>Our team works collaboratively with stakeholders to establish clear objectives and measurable outcomes, ensuring your path forward is both strategic and achievable.</p>
         </div>
         <div class="service">
             <h3>Marketing Solutions</h3>
-            <p>Our team crafts bespoke marketing campaigns that resonate with your target audience and maximize your brand's reach.</p>
-            <p>From digital outreach to traditional marketing channels, we tailor solutions that amplify your brand presence. With an emphasis on measurable results, we ensure your message connects with the right audience effectively.</p>
-            <p>Our approach combines creative storytelling with advanced analytics, enabling you to build a compelling brand identity and establish long-lasting customer relationships. Whether you're launching a new product or revitalizing an existing brand, we deliver impactful strategies.</p>
-        </div>
-        <div class="service">
-            <h3>Financial Consulting</h3>
-            <p>Optimize your financial resources with our expertise in budgeting, risk assessment, and revenue growth strategies.</p>
-            <p>Our financial consulting team offers a detailed analysis of your current processes and identifies areas of improvement. We guide you in capital allocation, forecasting, and securing financial resilience in an evolving marketplace.</p>
-            <p>With our insights, you can streamline operations, enhance profitability, and mitigate financial risks. Our customized solutions are designed to ensure fiscal health and support your long-term business goals.</p>
+            <p>Our marketing services are designed to connect your brand with the right audience. From creating compelling campaigns to optimizing digital outreach, we ensure your brand’s voice resonates effectively across platforms.</p>
+            <p>Using data-driven insights, we develop tailored marketing strategies that drive engagement, build loyalty, and achieve measurable results.</p>
+            <p>Whether you’re launching a new product or revitalizing your brand, we’ll help you stand out in a competitive market.</p>
         </div>
         <div class="service">
             <h3>Crypto Consultancy and Financial Accounting</h3>
-            <p>Navigate the complexities of the cryptocurrency market with our expert guidance. We help you leverage blockchain technology and ensure compliance in financial accounting.</p>
-            <p>Our crypto consultancy services include portfolio management, regulatory advisory, and strategic integration of blockchain solutions. We ensure that your crypto ventures align seamlessly with your overarching business goals.</p>
-            <p>By staying ahead of industry trends and regulatory changes, we empower you to make informed decisions in this rapidly evolving space. Whether you're investing in cryptocurrencies or integrating blockchain into your operations, we provide comprehensive support.</p>
+            <p>Our expertise in cryptocurrency and blockchain technology allows us to provide cutting-edge solutions for navigating this complex space. From portfolio management to regulatory compliance, we help you maximize the potential of digital assets.</p>
+            <p>In financial accounting, we deliver robust solutions for budgeting, forecasting, and ensuring compliance with industry standards. Our integrated approach ensures your financial systems remain resilient and efficient.</p>
+            <p>Whether you're entering the world of cryptocurrency or optimizing traditional financial processes, our consultancy services are tailored to meet your needs.</p>
         </div>
     </section>
     <section class="contact" id="contact">
@@ -190,10 +149,7 @@
         <p>Phone: +447498982822</p>
     </section>
     <footer>
-        <p>&copy; 2025 Your Consultancy Company. All rights reserved.</p>
-        <div class="language-selector" style="text-align: center; margin-top: 20px;">
-            <a href="#">English</a> | <a href="#">Български</a>
-        </div>
+        <p>&copy; 2025 PANVENEDUX. All rights reserved.</p>
     </footer>
 </body>
 </html>
