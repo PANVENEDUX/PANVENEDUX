@@ -17,20 +17,21 @@ header h1 {
 nav ul {
     list-style: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
     margin: 0;
+    display: flex; /* This makes the nav items appear in a row */
+    gap: 20px;      /* Optional: adds spacing between items */
+    align-items: center;
 }
-nav ul li {
-    margin: 0 15px;
-}
+
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: #333;
     font-weight: bold;
+    font-size: 1rem;
 }
+
 nav ul li a:hover {
-    text-decoration: underline;
+    color: #D4AF37; /* or whatever hover color you prefer */
 }
 .hero {
     text-align: center;
