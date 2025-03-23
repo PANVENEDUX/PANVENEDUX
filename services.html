@@ -1,9 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Services | PANVENEDUX</title>
+  <title>Услуги | PANVENEDUX</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FSSMM2HVX2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FSSMM2HVX2');
+  </script>
+
   <style>
     body {
       margin: 0;
@@ -78,7 +88,7 @@
 
     main {
       padding: 60px 20px;
-      background-color: #ffffff;
+      background-color: white;
     }
 
     h2 {
@@ -88,17 +98,13 @@
       text-align: center;
     }
 
-    h3 {
-      font-size: 1.4rem;
-      color: #002147;
-      margin-top: 40px;
-      margin-bottom: 10px;
-    }
-
-    p {
+    .services p {
       font-size: 1rem;
       line-height: 1.7;
       margin-bottom: 20px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     footer {
@@ -143,10 +149,10 @@
       <h1>PANVENEDUX</h1>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html" class="active">Services</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="index-bg.html">Начало</a></li>
+          <li><a href="about-bg.html">За нас</a></li>
+          <li><a href="services-bg.html" class="active">Услуги</a></li>
+          <li><a href="contact-bg.html">Контакт</a></li>
         </ul>
       </nav>
     </div>
@@ -154,30 +160,24 @@
 
   <main>
     <div class="container">
-      <h2>Our Services</h2>
+      <section class="services">
+        <h2>Нашите услуги</h2>
+        <p><strong>Стратегически анализ и планиране:</strong> Работим със структури, които се нуждаят от яснота, посока и обективна оценка на текущото си състояние и възможностите за растеж.</p>
 
-      <h3>Business Structure</h3>
-      <p>A solid internal structure is the backbone of any sustainable organization. At PANVENEDUX, we take a methodical approach to diagnosing your internal processes, conducting a comprehensive audit that goes beyond surface-level inefficiencies.</p>
-      <p>We identify both obvious bottlenecks and underlying issues that disrupt communication, productivity, and decision-making. Our methodology combines established business models with modern operational tools to offer realistic, tailored improvements — no fluff, no theory-heavy jargon.</p>
-      <p>We implement practical solutions like delegation frameworks, workflow audits, reporting systems, and strategic automation — all tracked through KPIs and continuous feedback loops.</p>
+        <p><strong>Позициониране и комуникация:</strong> Помагаме на клиенти да изградят автентичен глас, който е в синхрон с техните ценности, публика и дългосрочни цели.</p>
 
-      <h3>Business Strategy</h3>
-      <p>Strategy isn’t a buzzword — it’s a necessity. Without it, businesses rely on guesswork, scatter efforts, and miss opportunity. PANVENEDUX builds precise, custom strategies rooted in market realities and your company’s unique potential.</p>
-      <p>We start with diagnostics: strengths, weaknesses, market position. Then we shape a roadmap — actionable, sustainable, and adaptable. We help you align leadership, define KPIs, and monitor performance in real time.</p>
+        <p><strong>Организационно развитие:</strong> Подкрепяме трансформации, които целят по-добра вътрешна ефективност, етична структура и устойчиво лидерство.</p>
 
-      <h3>Marketing</h3>
-      <p>Marketing isn’t about shouting — it’s about speaking clearly, consistently, and meaningfully. We don’t just build campaigns — we build narratives. We craft story, tone, and delivery across all channels — digital, experiential, and print.</p>
-      <p>We test what works, cut what doesn’t, and focus on resonance, not reach.</p>
+        <p><strong>Обучение и консултиране:</strong> Провеждаме целенасочени обучения, уъркшопи и дългосрочни консултантски сесии, съобразени със специфичния контекст на клиента.</p>
 
-      <h3>Crypto & Accounting</h3>
-      <p>We guide you through the fast-moving world of crypto with grounded financial expertise. Whether you’re accepting crypto, investing, or building blockchain infrastructure — we help you assess risk, regulatory impact, and sustainability.</p>
-      <p>Our edge: we understand both the technology and the accountability it demands.</p>
+        <p>Ние не предлагаме готови пакети. Вместо това създаваме персонализирани решения, базирани на задълбочен анализ, доверие и професионална ангажираност.</p>
+      </section>
     </div>
   </main>
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 PANVENEDUX. All rights reserved.</p>
+      <p>&copy; 2025 PANVENEDUX. Всички права запазени.</p>
       <p>Email: <a href="mailto:panvenedux@gmail.com">panvenedux@gmail.com</a></p>
       <p class="language-switch-footer">
         <a href="services.html">English</a> | <a href="services-bg.html">Български</a>
