@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Контакт | PANVENEDUX</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    header {
+      background-color: #002147;
+      padding: 20px 0 10px 0;
+      border-bottom: 5px solid #D4AF37;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      margin: 15px 0 0 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 1.3rem;
+      padding: 10px;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background-color: #D4AF37;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    nav ul li a:hover {
+      color: #D4AF37;
+      transform: scale(1.1);
+    }
+
+    nav ul li a.active {
+      color: #D4AF37;
+    }
+
+    main {
+      padding: 60px 20px;
+      background-color: white;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #002147;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, textarea {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: Georgia, serif;
+    }
+
+    button {
+      background-color: #002147;
+      color: white;
+      padding: 12px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #D4AF37;
+      color: #002147;
+    }
+
+    footer {
+      background-color: #f5f5f5;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.9rem;
+      color: #777;
+      border-top: 1px solid #ccc;
+    }
+
+    footer a {
+      color: #002147;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .language-switch-footer {
+      margin-top: 10px;
+      font-size: 0.95rem;
+    }
+
+    .language-switch-footer a {
+      color: #002147;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 5px;
+    }
+
+    .language-switch-footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>PANVENEDUX</h1>
+      <nav>
+        <ul>
+          <li><a href="index-bg.html">Начало</a></li>
+          <li><a href="about-bg.html">За нас</a></li>
+          <li><a href="services-bg.html">Услуги</a></li>
+          <li><a href="contact-bg.html" class="active">Контакт</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>Свържете се с нас</h2>
+      <p>Ако желаете да обсъдим потенциално партньорство или имате въпрос, не се колебайте да ни пишете директно или чрез формата по-долу:</p>
+      <p><strong>Имейл:</strong> <a href="mailto:panvenedux@gmail.com">panvenedux@gmail.com</a></p>
+
+      <form action="mailto:panvenedux@gmail.com" method="POST" enctype="text/plain">
+        <label for="name">Име:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Имейл адрес:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Съобщение:</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit">Изпрати</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 PANVENEDUX. Всички права запазени.</p>
+      <p>Email: <a href="mailto:panvenedux@gmail.com">panvenedux@gmail.com</a></p>
+      <p class="language-switch-footer">
+        <a href="contact.html">English</a> | <a href="contact-bg.html">Български</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
