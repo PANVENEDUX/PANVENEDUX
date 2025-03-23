@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | PANVENEDUX</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Embedded CSS just for this page if you don’t want to edit styles.css */
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    header {
+      background-color: #e6f0ff;
+      padding: 20px 0;
+      border-bottom: 2px solid #003366;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #003366;
+      font-weight: bold;
+      font-size: 1.1rem;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: #003366;
+      color: white;
+    }
+
+    main {
+      padding: 40px 0;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #003366;
+      margin-bottom: 20px;
+    }
+
+    .contact p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    form button {
+      background-color: #003366;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #0055aa;
+    }
+
+    footer {
+      background-color: #f5f5f5;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      border-top: 1px solid #ccc;
+    }
+
+    footer a {
+      color: #003366;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>PANVENEDUX</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="contact">
+      <h2>Contact Us</h2>
+      <p>If you’re interested in working together or have any questions, feel free to reach out directly via email or fill in the form below.</p>
+
+      <p><strong>Email:</strong> <a href="mailto:panvenedux@gmail.com">panvenedux@gmail.com</a></p>
+
+      <form action="mailto:panvenedux@gmail.com" method="POST" enctype="text/plain">
+        <label for="name">Name:</label><br/>
+        <input type="text" id="name" name="name" required /><br/><br/>
+
+        <label for="email">Email:</label><br/>
+        <input type="email" id="email" name="email" required /><br/><br/>
+
+        <label for="message">Message:</label><br/>
+        <textarea id="message" name="message" rows="6" required></textarea><br/><br/>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 PANVENEDUX. All rights reserved.</p>
+      <p>Email: <a href="mailto:panvenedux@gmail.com">panvenedux@gmail.com</a></p>
+    </div>
+  </footer>
+</body>
+</html>
