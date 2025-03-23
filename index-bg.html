@@ -149,6 +149,41 @@
     .language-switch-footer a:hover {
       text-decoration: underline;
     }
+
+    /* Cookie Banner Styles */
+    .cookie-banner {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #002147;
+      color: white;
+      padding: 1rem;
+      display: none;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
+    }
+
+    .cookie-banner p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .cookie-banner button {
+      margin-left: 1rem;
+      background: gold;
+      color: black;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .cookie-banner button:hover {
+      opacity: 0.8;
+    }
   </style>
 </head>
 <body>
@@ -161,7 +196,7 @@
           <li><a href="index-bg.html" class="active">Начало</a></li>
           <li><a href="about-bg.html">За нас</a></li>
           <li><a href="services-bg.html">Услуги</a></li>
-          <li><a href="contact-bg.html">Контакти</a></li>
+          <li><a href="contact-bg.html">Контакт</a></li>
         </ul>
       </nav>
     </div>
@@ -170,16 +205,16 @@
   <main>
     <section class="hero">
       <div class="container">
-        <h2>Преплитаме традиции и съвършенство в устойчив бизнес растеж</h2>
+        <h2>Наследство и точност в подкрепа на устойчив растеж</h2>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
         <h3>Кои сме ние</h3>
-        <p><strong>PANVENEDUX</strong> е консултантска компания, която съчетава наследство и съвременност. Вдъхновени от интелектуалната и културна традиция на фамилията Венедикови, ние предлагаме стратегически услуги за модерния бизнес свят.</p>
-        <p>Нашата работа се базира на дълбочинно разбиране на вътрешните процеси, пазара и реалните нужди на клиентите. Създаваме решения, които не просто изглеждат добре на хартия — те работят в реалността.</p>
-        <p>За нас почтеността и аналитичната яснота не са допълнение, а основа на всяко партньорство. Ние сме партньор за организации, които търсят устойчиво развитие, стойност и дългосрочно доверие.</p>
+        <p><strong>PANVENEDUX</strong> е консултантска компания, която съчетава наследство и съвременност. Вдъхновена от интелектуалната и културна традиция на семейство Венедикови, ние предлагаме стратегически услуги за днешния бизнес свят.</p>
+        <p>Работата ни се основава на дълбоко разбиране на вътрешни структури, пазарни сили и реални нужди на клиентите. Създаваме стратегии, които не само изглеждат добре на хартия — те работят в практиката.</p>
+        <p>За нас почтеността и аналитичната яснота не са добавка. Те са основата на всяко партньорство. Ние сме дългосрочен съюзник за организации, търсещи устойчиво развитие, стойност и доверие.</p>
       </div>
     </section>
   </main>
@@ -193,6 +228,38 @@
       </p>
     </div>
   </footer>
+
+  <!-- Cookie Banner (BG) -->
+  <div id="cookie-banner" class="cookie-banner">
+    <p>Този сайт използва бисквитки, за да подобри Вашето изживяване. Приемате ли?</p>
+    <div>
+      <button id="accept-cookies">Приемам</button>
+      <button id="decline-cookies">Отказвам</button>
+    </div>
+  </div>
+
+  <!-- Cookie Consent Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const banner = document.getElementById("cookie-banner");
+      const acceptBtn = document.getElementById("accept-cookies");
+      const declineBtn = document.getElementById("decline-cookies");
+
+      if (!localStorage.getItem("cookieConsent")) {
+        banner.style.display = "flex";
+      }
+
+      acceptBtn.addEventListener("click", function () {
+        localStorage.setItem("cookieConsent", "accepted");
+        banner.style.display = "none";
+      });
+
+      declineBtn.addEventListener("click", function () {
+        localStorage.setItem("cookieConsent", "declined");
+        banner.style.display = "none";
+      });
+    });
+  </script>
 
 </body>
 </html>
