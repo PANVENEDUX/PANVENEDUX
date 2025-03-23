@@ -18,6 +18,7 @@
       margin: 0 auto;
     }
 
+    /* HEADER */
     header {
       background-color: #002147;
       padding: 20px 0 10px 0;
@@ -76,6 +77,7 @@
       color: #D4AF37;
     }
 
+    /* HERO SECTION */
     .hero {
       background: linear-gradient(to bottom, #003366, #002147);
       color: white;
@@ -89,6 +91,7 @@
       margin: 0;
     }
 
+    /* CONTENT SECTION */
     .section {
       padding: 60px 20px;
       background-color: white;
@@ -106,6 +109,7 @@
       margin-bottom: 20px;
     }
 
+    /* FOOTER */
     footer {
       background-color: #f5f5f5;
       text-align: center;
@@ -123,26 +127,40 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    .language-switch-footer {
+      margin-top: 10px;
+      font-size: 0.95rem;
+    }
+
+    .language-switch-footer a {
+      color: #002147;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 5px;
+    }
+
+    .language-switch-footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
 
- <header>
-  <div class="container">
-    <h1>PANVENEDUX</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-    <div class="language-switch">
-      <a href="index-bg.html">🇧🇬 Български</a>
+  <header>
+    <div class="container">
+      <h1>PANVENEDUX</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
-</header>
+  </header>
+
   <main>
     <section class="hero">
       <div class="container">
@@ -164,6 +182,9 @@
     <div class="container">
       <p>&copy; 2025 PANVENEDUX. All rights reserved.</p>
       <p>Email: <a href="mailto:panvenedux@gmail.com">panvenedux@gmail.com</a></p>
+      <p class="language-switch-footer">
+        <a href="index.html">English</a> | <a href="index-bg.html">Български</a>
+      </p>
     </div>
   </footer>
 
