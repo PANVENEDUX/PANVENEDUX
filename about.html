@@ -1,43 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | PANVENEDUX</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | PANVENEDUX</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    header {
+      background-color: #002147;
+      color: white;
+      padding: 20px 0;
+      border-bottom: 5px solid #D4AF37;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    nav {
+      text-align: right;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #D4AF37;
+    }
+
+    main {
+      background-color: #ffffff;
+      padding: 60px 0;
+    }
+
+    .card {
+      background-color: white;
+      border: 3px solid #D4AF37;
+      border-radius: 10px;
+      padding: 40px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #002147;
+      border-bottom: 2px solid #D4AF37;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background-color: #f5f5f5;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.9rem;
+      color: #777;
+      border-top: 1px solid #ccc;
+    }
+
+    footer a {
+      color: #002147;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>PANVENEDUX</h1>
-            <nav>
-                <ul>
-                <a href="./about.html">About</a>
-<a href="./services.html">Services</a>
-<a href="./contact.html">Contact</a>
-<a href="./index.html">Home</a>
+  <header>
+    <div class="container">
+      <h1>PANVENEDUX</h1>
+      <nav>
+        <a href="about.html" class="active">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="index.html">Home</a>
+      </nav>
+    </div>
+  </header>
 
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="container">
+  <main>
+    <div class="container">
+      <div class="card">
         <section class="about">
-            <h2>About Us</h2>
-            <p>PANVENEDUX is a consultancy rooted in tradition, integrity, and clarity of thought. Inspired by the legacy of the Venedikovi family — known for their contributions to academia, cultural policy, and public life in Bulgaria — the firm bridges heritage with forward-thinking strategy.</p>
+          <h2>About Us</h2>
 
-            <p>We believe that true consulting is not about surface-level fixes, but deep, strategic alignment. PANVENEDUX was founded to bring a principled, analytical approach to modern business problems. We combine our historical roots with a sharp understanding of current market dynamics to deliver lasting value to our clients.</p>
+          <p><strong>PANVENEDUX</strong> is a consultancy rooted in tradition, integrity, and clarity of thought. Inspired by the legacy of the Venedikovi family — known for their contributions to academia, cultural policy, and public life in Bulgaria — the firm bridges heritage with forward-thinking strategy.</p>
 
-            <p>Our work is guided by a simple idea: that intellectual rigor and ethical commitment are not luxuries — they are competitive advantages. PANVENEDUX is not just a consultancy; it’s a mindset, a standard, and a long-term partner for those who want to grow with meaning and precision.</p>
+          <p>We believe that true consulting is not about surface-level fixes, but deep, strategic alignment. PANVENEDUX was founded to bring a principled, analytical approach to modern business problems. We combine our historical roots with a sharp understanding of current market dynamics to deliver lasting value to our clients.</p>
+
+          <p>Our work is guided by a simple idea: that intellectual rigor and ethical commitment are not luxuries — they are competitive advantages. PANVENEDUX is not just a consultancy; it’s a mindset, a standard, and a long-term partner for those who want to grow with meaning and precision.</p>
         </section>
-    </main>
+      </div>
+    </div>
+  </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 PANVENEDUX. All rights reserved.</p>
-            <p>Email: <a href="mailto:panvenedux@gmail.com">panvenedux@gmail.com</a></p>
-        </div>
-    </footer>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 PANVENEDUX. All rights reserved.</p>
+      <p>Email: <a href="mailto:panvenedux@gmail.com">panvenedux@gmail.com</a></p>
+    </div>
+  </footer>
 </body>
 </html>
