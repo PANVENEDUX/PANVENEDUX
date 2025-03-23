@@ -3,103 +3,125 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact | PANVENEDUX</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Contact Us | PANVENEDUX</title>
   <style>
     body {
       margin: 0;
       font-family: Georgia, serif;
-      background-color: #f5f5f5;
+      background-color: #ffffff;
       color: #333;
-    }
-
-    header {
-      background-color: #002147;
-      color: white;
-      padding: 20px 0;
-      border-bottom: 5px solid #D4AF37;
     }
 
     .container {
       width: 90%;
-      max-width: 1100px;
+      max-width: 800px;
       margin: 0 auto;
     }
 
-    h1 {
+    header {
+      background-color: #002147;
+      padding: 20px 0 10px 0;
+      border-bottom: 5px solid #D4AF37;
+      text-align: center;
+    }
+
+    header h1 {
       margin: 0;
-      font-size: 2rem;
-    }
-
-    nav {
-      text-align: right;
-      margin-top: 10px;
-    }
-
-    nav a {
+      font-size: 2.5rem;
       color: white;
-      text-decoration: none;
-      margin-left: 20px;
       font-weight: bold;
     }
 
-    nav a:hover,
-    nav a.active {
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      margin: 15px 0 0 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 1.3rem;
+      padding: 10px;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background-color: #D4AF37;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    nav ul li a:hover {
+      color: #D4AF37;
+      transform: scale(1.1);
+    }
+
+    nav ul li a.active {
       color: #D4AF37;
     }
 
     main {
-      background-color: #ffffff;
-      padding: 60px 0;
-    }
-
-    .card {
+      padding: 60px 20px;
       background-color: white;
-      border: 3px solid #D4AF37;
-      border-radius: 10px;
-      padding: 40px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     }
 
     h2 {
       font-size: 2rem;
       color: #002147;
-      border-bottom: 2px solid #D4AF37;
-      padding-bottom: 10px;
       margin-bottom: 20px;
+      text-align: center;
     }
 
-    .contact p {
-      font-size: 1rem;
-      line-height: 1.6;
-      margin-bottom: 20px;
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 30px;
     }
 
-    form input,
-    form textarea {
-      width: 100%;
+    label {
+      font-weight: bold;
+    }
+
+    input, textarea {
       padding: 10px;
-      margin-top: 5px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
       font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
       font-family: Georgia, serif;
     }
 
-    form button {
+    button {
       background-color: #002147;
       color: white;
-      border: none;
-      padding: 10px 20px;
+      padding: 12px;
       font-size: 1rem;
-      border-radius: 6px;
+      border: none;
+      border-radius: 4px;
       cursor: pointer;
+      font-weight: bold;
       transition: background-color 0.3s ease;
     }
 
-    form button:hover {
-      background-color: #003366;
+    button:hover {
+      background-color: #D4AF37;
+      color: #002147;
     }
 
     footer {
@@ -119,43 +141,58 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    .language-switch-footer {
+      margin-top: 10px;
+      font-size: 0.95rem;
+    }
+
+    .language-switch-footer a {
+      color: #002147;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 5px;
+    }
+
+    .language-switch-footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
+
   <header>
     <div class="container">
       <h1>PANVENEDUX</h1>
-   <nav>
-  <a href="index.html" class="active">Home</a>
-  <a href="about.html">About</a>
-  <a href="services.html">Services</a>
-  <a href="contact.html">Contact Us</a>
-</nav>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
   <main>
     <div class="container">
-      <div class="card">
-        <section class="contact">
-          <h2>Contact Us</h2>
-          <p>If you’re interested in working together or have any questions, feel free to reach out directly via email or fill in the form below.</p>
-          <p><strong>Email:</strong> <a href="mailto:panvenedux@gmail.com">panvenedux@gmail.com</a></p>
+      <h2>Contact Us</h2>
+      <p>If you're interested in working together or have any questions, feel free to reach out via email or fill in the form below:</p>
+      <p><strong>Email:</strong> <a href="mailto:panvenedux@gmail.com">panvenedux@gmail.com</a></p>
 
-          <form action="mailto:panvenedux@gmail.com" method="POST" enctype="text/plain">
-            <label for="name">Name:</label><br/>
-            <input type="text" id="name" name="name" required /><br/>
+      <form action="mailto:panvenedux@gmail.com" method="POST" enctype="text/plain">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
 
-            <label for="email">Email:</label><br/>
-            <input type="email" id="email" name="email" required /><br/>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
 
-            <label for="message">Message:</label><br/>
-            <textarea id="message" name="message" rows="6" required></textarea><br/>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
 
-            <button type="submit">Send Message</button>
-          </form>
-        </section>
-      </div>
+        <button type="submit">Send Message</button>
+      </form>
     </div>
   </main>
 
@@ -163,7 +200,11 @@
     <div class="container">
       <p>&copy; 2025 PANVENEDUX. All rights reserved.</p>
       <p>Email: <a href="mailto:panvenedux@gmail.com">panvenedux@gmail.com</a></p>
+      <p class="language-switch-footer">
+        <a href="contact.html">English</a> | <a href="contact-bg.html">Български</a>
+      </p>
     </div>
   </footer>
+
 </body>
 </html>
