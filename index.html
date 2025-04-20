@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PANVENEDUX | Home</title>
   <style>
     body {
@@ -14,8 +14,8 @@
 
     header {
       background-color: #002147;
-      border-bottom: 5px solid #D4AF37;
       padding: 20px 0;
+      border-bottom: 5px solid #D4AF37;
       position: relative;
     }
 
@@ -42,7 +42,7 @@
       top: 25px;
       right: 20px;
       cursor: pointer;
-      z-index: 1000;
+      z-index: 10;
     }
 
     .hamburger div {
@@ -56,7 +56,7 @@
       background-color: #002147;
       color: white;
       text-align: center;
-      padding: 80px 20px 40px;
+      padding: 80px 20px 0;
     }
 
     .hero h1 {
@@ -84,6 +84,11 @@
 
     .cta-button:hover {
       background-color: #b9962f;
+    }
+
+    .hero-spacer {
+      height: 20px;
+      background-color: #002147;
     }
 
     .hero-image img {
@@ -140,6 +145,7 @@
       }
     }
   </style>
+
   <script>
     function toggleMenu() {
       const nav = document.querySelector("nav");
@@ -168,6 +174,8 @@
     <p>Boutique consultancy for strategic clarity and authentic positioning</p>
     <a href="services.html" class="cta-button">LEARN MORE</a>
   </section>
+
+  <div class="hero-spacer"></div>
 
   <section class="hero-image">
     <img src="hero-banner.jpg" alt="Business consultation table with pen and chart" />
