@@ -42,6 +42,42 @@
       font-weight: bold;
     }
 
+    nav {
+      position: relative;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 10px;
+      z-index: 999;
+      position: relative;
+      margin: 10px auto 0;
+    }
+
+    .hamburger .bar {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+
     nav ul {
       list-style: none;
       display: flex;
@@ -49,6 +85,8 @@
       gap: 50px;
       margin: 15px 0 0 0;
       padding: 0;
+      flex-wrap: wrap;
+      transition: all 0.3s ease;
     }
 
     nav ul li a {
@@ -140,6 +178,50 @@
     .language-switch-footer a:hover {
       text-decoration: underline;
     }
+
+    @media only screen and (max-width: 768px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 10px;
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+
+      nav ul.show {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      nav ul li a {
+        font-size: 1.1rem;
+        padding: 8px;
+      }
+
+      main {
+        padding: 40px 15px;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+      }
+
+      footer {
+        font-size: 0.85rem;
+        padding: 15px 10px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -148,7 +230,12 @@
     <div class="container">
       <h1>PANVENEDUX</h1>
       <nav>
-        <ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul id="nav-links">
           <li><a href="index-bg.html">Начало</a></li>
           <li><a href="about-bg.html" class="active">За нас</a></li>
           <li><a href="services-bg.html">Услуги</a></li>
@@ -163,11 +250,8 @@
       <section class="about">
         <h2>За нас</h2>
         <p><strong>PANVENEDUX</strong> е бутикова консултантска компания, основана върху принципите на професионализъм, почтеност и стратегическа яснота. Нашата мисия е да бъдем дългосрочен партньор на бизнеси, които се стремят не само към растеж, но към смислен и устойчив напредък.</p>
-
         <p>Черпим вдъхновение от интелектуалното наследство на семейство Венедикови — личности, отдали своя принос в образованието, културната политика и обществения живот на България. PANVENEDUX съчетава тази традиция със съвременни бизнес практики, за да предложи реални решения на сложни предизвикателства.</p>
-
         <p>Не вярваме в универсални шаблони и празни стратегии. Вместо това подхождаме индивидуално, с аналитична прецизност и етична последователност. Работим със структури, които имат дългосрочен поглед и ценят качеството над количеството.</p>
-
         <p>PANVENEDUX е избор за тези, които държат на автентичност, интелигентно позициониране и дълбока стратегическа подкрепа.</p>
       </section>
     </div>
@@ -182,6 +266,27 @@
       </p>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("nav-links");
+
+      hamburger.addEventListener("click", function () {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("show");
+      });
+
+      document.querySelectorAll("#nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth <= 768) {
+            hamburger.classList.remove("active");
+            navLinks.classList.remove("show");
+          }
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
