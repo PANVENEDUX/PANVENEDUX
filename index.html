@@ -15,7 +15,6 @@
   </script>
 
   <style>
-    /* Base styles */
     body {
       margin: 0;
       font-family: Georgia, serif;
@@ -136,6 +135,23 @@
       font-size: 2rem;
       font-style: italic;
       margin: 0;
+    }
+
+    .hero a.button {
+      display: inline-block;
+      margin-top: 30px;
+      background-color: #D4AF37;
+      color: #002147;
+      padding: 12px 24px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .hero a.button:hover {
+      background-color: #b9962f;
     }
 
     .section {
@@ -329,6 +345,7 @@
     <section class="hero">
       <div class="container">
         <h2>Weaving heritage and precision into sustainable business growth</h2>
+        <a href="services.html" class="button">Learn More</a>
       </div>
     </section>
 
@@ -364,7 +381,6 @@
   <!-- Scripts -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      // Hamburger toggle
       const hamburger = document.getElementById("hamburger");
       const navLinks = document.getElementById("nav-links");
 
@@ -373,7 +389,6 @@
         navLinks.classList.toggle("show");
       });
 
-      // Close menu on link click (mobile only)
       document.querySelectorAll("#nav-links a").forEach(link => {
         link.addEventListener("click", () => {
           if (window.innerWidth <= 768) {
@@ -383,7 +398,6 @@
         });
       });
 
-      // Cookie consent
       const banner = document.getElementById("cookie-banner");
       const acceptBtn = document.getElementById("accept-cookies");
       const declineBtn = document.getElementById("decline-cookies");
