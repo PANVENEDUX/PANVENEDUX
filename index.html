@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PANVENEDUX | Home</title>
-
   <style>
     body {
       margin: 0;
@@ -15,8 +14,7 @@
 
     header {
       background-color: #002147;
-      padding: 20px 0;
-      border-bottom: 5px solid #D4AF37;
+      padding: 20px;
       position: relative;
     }
 
@@ -24,7 +22,6 @@
       display: flex;
       justify-content: center;
       gap: 40px;
-      margin-bottom: 20px;
     }
 
     nav a {
@@ -38,12 +35,12 @@
     .hamburger {
       display: none;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      width: 40px;
-      height: 30px;
-      margin: 0 auto;
+      position: absolute;
+      top: 20px;
+      right: 20px;
       cursor: pointer;
+      z-index: 10;
     }
 
     .hamburger div {
@@ -54,10 +51,12 @@
     }
 
     .hero {
-      background-color: #002147;
+      background-image: url('hero-banner.jpg');
+      background-size: cover;
+      background-position: center;
       color: white;
       text-align: center;
-      padding: 80px 20px 60px;
+      padding: 100px 20px;
     }
 
     .hero h1 {
@@ -87,17 +86,6 @@
       background-color: #b9962f;
     }
 
-    .hero-image {
-      width: 100%;
-      height: auto;
-    }
-
-    .hero-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
     footer {
       background-color: #f5f5f5;
       text-align: center;
@@ -125,7 +113,7 @@
         align-items: center;
         background-color: #002147;
         gap: 20px;
-        padding-bottom: 20px;
+        padding: 20px 0;
       }
 
       nav.active {
@@ -134,9 +122,6 @@
 
       .hamburger {
         display: flex;
-        position: absolute;
-        top: 25px;
-        right: 20px;
       }
 
       .hero h1 {
@@ -148,7 +133,6 @@
       }
     }
   </style>
-
   <script>
     function toggleMenu() {
       const nav = document.querySelector("nav");
@@ -157,7 +141,6 @@
   </script>
 </head>
 <body>
-
   <header>
     <div class="hamburger" onclick="toggleMenu()">
       <div></div>
@@ -178,10 +161,6 @@
     <a href="services.html" class="cta-button">LEARN MORE</a>
   </section>
 
-  <section class="hero-image">
-    <img src="hero-banner.jpg" alt="Business consultation table with pen and chart" />
-  </section>
-
   <footer>
     <p>&copy; 2025 PANVENEDUX. All rights reserved.</p>
     <p>Email: <a href="mailto:info@panvenedux.com">info@panvenedux.com</a></p>
@@ -189,6 +168,5 @@
       <a href="index.html">English</a> | <a href="index-bg.html">Български</a>
     </p>
   </footer>
-
 </body>
 </html>
