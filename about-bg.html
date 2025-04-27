@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>За нас | PANVENEDUX</title>
+  <title>За Нас | PANVENEDUX</title>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FSSMM2HVX2"></script>
@@ -21,31 +21,26 @@
       background-color: #ffffff;
       color: #333;
     }
-
     .container {
       width: 90%;
       max-width: 1100px;
       margin: 0 auto;
     }
-
     header {
       background-color: #002147;
       padding: 20px 0 10px 0;
       border-bottom: 5px solid #D4AF37;
       text-align: center;
     }
-
     header h1 {
       margin: 0;
       font-size: 2.5rem;
       color: white;
       font-weight: bold;
     }
-
     nav {
       position: relative;
     }
-
     .hamburger {
       display: none;
       flex-direction: column;
@@ -58,26 +53,21 @@
       position: relative;
       margin: 10px auto 0;
     }
-
     .hamburger .bar {
       width: 25px;
       height: 3px;
       background-color: white;
       transition: all 0.3s ease-in-out;
     }
-
     .hamburger.active .bar:nth-child(1) {
       transform: rotate(45deg) translate(5px, 5px);
     }
-
     .hamburger.active .bar:nth-child(2) {
       opacity: 0;
     }
-
     .hamburger.active .bar:nth-child(3) {
       transform: rotate(-45deg) translate(6px, -6px);
     }
-
     nav ul {
       list-style: none;
       display: flex;
@@ -88,7 +78,6 @@
       flex-wrap: wrap;
       transition: all 0.3s ease;
     }
-
     nav ul li a {
       text-decoration: none;
       color: white;
@@ -98,7 +87,6 @@
       position: relative;
       transition: all 0.3s ease;
     }
-
     nav ul li a::after {
       content: '';
       position: absolute;
@@ -110,33 +98,27 @@
       transition: all 0.3s ease;
       transform: translateX(-50%);
     }
-
     nav ul li a:hover::after {
       width: 100%;
     }
-
     nav ul li a:hover {
       color: #D4AF37;
       transform: scale(1.1);
     }
-
     nav ul li a.active {
       color: #D4AF37;
     }
-
     main {
       padding: 60px 20px;
       background-color: #ffffff;
     }
-
     h2 {
       font-size: 2rem;
       color: #002147;
       margin-bottom: 30px;
       text-align: center;
     }
-
-    .about p {
+    .about p, .about ul {
       font-size: 1rem;
       line-height: 1.7;
       margin-bottom: 20px;
@@ -144,7 +126,6 @@
       margin-left: auto;
       margin-right: auto;
     }
-
     footer {
       background-color: #f5f5f5;
       text-align: center;
@@ -153,41 +134,33 @@
       color: #777;
       border-top: 1px solid #ccc;
     }
-
     footer a {
       color: #002147;
       text-decoration: none;
     }
-
     footer a:hover {
       text-decoration: underline;
     }
-
     .language-switch-footer {
       margin-top: 10px;
       font-size: 0.95rem;
     }
-
     .language-switch-footer a {
       color: #002147;
       text-decoration: none;
       font-weight: bold;
       margin: 0 5px;
     }
-
     .language-switch-footer a:hover {
       text-decoration: underline;
     }
-
     @media only screen and (max-width: 768px) {
       header h1 {
         font-size: 1.8rem;
       }
-
       .hamburger {
         display: flex;
       }
-
       nav ul {
         display: none;
         flex-direction: column;
@@ -197,26 +170,24 @@
         opacity: 0;
         transform: translateY(-10px);
       }
-
       nav ul.show {
         display: flex;
         opacity: 1;
         transform: translateY(0);
       }
-
       nav ul li a {
         font-size: 1.1rem;
         padding: 8px;
       }
-
       main {
         padding: 40px 15px;
       }
-
       h2 {
         font-size: 1.6rem;
       }
-
+      .about p {
+        font-size: 0.95rem;
+      }
       footer {
         font-size: 0.85rem;
         padding: 15px 10px;
@@ -224,6 +195,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <header>
@@ -236,10 +208,10 @@
           <span class="bar"></span>
         </button>
         <ul id="nav-links">
-          <li><a href="index-bg.html">Начало</a></li>
-          <li><a href="about-bg.html" class="active">За нас</a></li>
-          <li><a href="services-bg.html">Услуги</a></li>
-          <li><a href="contact-bg.html">Контакт</a></li>
+          <li><a href="index.html">Начало</a></li>
+          <li><a href="about-bg.html" class="active">За Нас</a></li>
+          <li><a href="services.html">Услуги</a></li>
+          <li><a href="contact.html">Контакт</a></li>
         </ul>
       </nav>
     </div>
@@ -248,11 +220,51 @@
   <main>
     <div class="container">
       <section class="about">
-        <h2>За нас</h2>
-        <p><strong>PANVENEDUX</strong> е бутикова консултантска компания, основана върху принципите на професионализъм, почтеност и стратегическа яснота. Нашата мисия е да бъдем дългосрочен партньор на бизнеси, които се стремят не само към растеж, но към смислен и устойчив напредък.</p>
-        <p>PANVENEDUX съчетава традиция със съвременни бизнес практики, за да предложи реални решения на сложни предизвикателства.</p>
-        <p>Не вярваме в универсални шаблони и празни стратегии. Вместо това подхождаме индивидуално, с аналитична прецизност и етична последователност. Работим със структури, които имат дългосрочен поглед и ценят качеството над количеството.</p>
-        <p>PANVENEDUX е избор за тези, които държат на автентичност, интелигентно позициониране и дълбока стратегическа подкрепа.</p>
+        <h2>За Нас</h2>
+
+        <p><strong>Прецизност. Дискретност. Устойчивост.</strong></p>
+        <p><strong>PANVENEDUX</strong> предоставя стратегическо консултиране за лидери и организации, които действат под реален натиск – където яснота, управление, комуникация и устойчивост при кризи не са опция, а необходимост.</p>
+        <p>Основана от <strong>Марио Покровски</strong>, PANVENEDUX съчетава дисциплината на международната стратегия, лидерството и оперативния консултинг в прецизен модел, създаден за сложността на съвременния свят.</p>
+
+        <p>Нашата експертиза стъпва на:</p>
+        <ul>
+          <li>Дълбок консултантски опит в сфери като финанси, отбрана, развлекателна индустрия и международна политика</li>
+          <li>Директно оперативно участие в събития с глобални фигури като <strong>Нейно Кралско Височество Принцеса Нура Ал Сауд</strong> и <strong>Сара, Херцогиня на Йорк</strong>, както и в организации като <strong>Игрите Инвиктус</strong></li>
+          <li>Подкрепа на изпълнителни клиенти на международни платформи като <strong>Наградите БАФТА</strong>, <strong>Американските филмови награди</strong> и световни дипломатически форуми</li>
+        </ul>
+
+        <p>Ние разбираме необходимостта от дискретност, прецизност и стратегическо спокойствие – защото сме работили в такива условия. PANVENEDUX пренася този опит в създаването на решения, които помагат на организациите да се ориентират в сложността и да постигат устойчив растеж.</p>
+
+        <h3>Основателят</h3>
+        <p>Марио Покровски притежава:</p>
+        <ul>
+          <li>Магистърска степен с отличие по <strong>Сигурност, Лидерство и Общество</strong> от <strong>Кралския колеж в Лондон</strong></li>
+          <li>Сертификат по <strong>Лидерство и Мениджмънт</strong> от <strong>Harvard Business School Online</strong></li>
+          <li>Опит в научноизследователски и оперативни дейности в <strong>Лондонската фондова борса</strong></li>
+          <li>Стратегически консултации в частния сектор и публични институции</li>
+        </ul>
+
+        <h3>Нашият Подход</h3>
+        <p>В PANVENEDUX не предлагаме готови шаблони. Всяка ангажираност започва от първите принципи: разбиране на контекста, изясняване на приоритетите и създаване на устойчиви, приложими стратегии.</p>
+
+        <p>Специализираме в:</p>
+        <ul>
+          <li>Стратегически анализ и организационно изграждане</li>
+          <li>Моделиране на системи за управление и процеси на вземане на решения</li>
+          <li>Културна интелигентност, комуникационно позициониране и хармонизация на ценностите</li>
+          <li>Подготовка за кризи, обучение по устойчивост и оперативно спокойствие</li>
+          <li>Финансови иновации и отговорно прилагане на криптотехнологии</li>
+        </ul>
+
+        <h3>Защо PANVENEDUX?</h3>
+        <p><strong>Работим там, където има значение.</strong> От дискретно взаимодействие с частни финансови институции до стратегически съвети на глобални лидерски събития — нашият опит е доказан и винаги актуален.</p>
+        <p><strong>Разбираме и двете страни.</strong> За нас дипломатическите преговори на високо ниво и оперативната реализация не са отделни светове – те са свързани реалности, които обединяваме за нашите клиенти.</p>
+        <p><strong>Носим яснота в сложността.</strong> Ако вашата организация има нужда от яснота и подреденост между структура, култура и иновации — ние сме вашият партньор.</p>
+
+        <h3>Контакт</h3>
+        <p>Готови ли сте да подредите, укрепите и защитите бъдещето на вашата стратегия?<br>
+        <strong>Имейл:</strong> <a href="mailto:info@panvenedux.com">info@panvenedux.com</a></p>
+
       </section>
     </div>
   </main>
@@ -260,13 +272,14 @@
   <footer>
     <div class="container">
       <p>&copy; 2025 PANVENEDUX. Всички права запазени.</p>
-      <p>Email: <a href="mailto:info@panvenedux.com">info@panvenedux.com</a></p>
+      <p>Имейл: <a href="mailto:info@panvenedux.com">info@panvenedux.com</a></p>
       <p class="language-switch-footer">
         <a href="about.html">English</a> | <a href="about-bg.html">Български</a>
       </p>
     </div>
   </footer>
 
+  <!-- JS for hamburger toggle -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const hamburger = document.getElementById("hamburger");
