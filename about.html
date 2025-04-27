@@ -21,31 +21,26 @@
       background-color: #ffffff;
       color: #333;
     }
-
     .container {
       width: 90%;
       max-width: 1100px;
       margin: 0 auto;
     }
-
     header {
       background-color: #002147;
       padding: 20px 0 10px 0;
       border-bottom: 5px solid #D4AF37;
       text-align: center;
     }
-
     header h1 {
       margin: 0;
       font-size: 2.5rem;
       color: white;
       font-weight: bold;
     }
-
     nav {
       position: relative;
     }
-
     .hamburger {
       display: none;
       flex-direction: column;
@@ -58,26 +53,21 @@
       position: relative;
       margin: 10px auto 0;
     }
-
     .hamburger .bar {
       width: 25px;
       height: 3px;
       background-color: white;
       transition: all 0.3s ease-in-out;
     }
-
     .hamburger.active .bar:nth-child(1) {
       transform: rotate(45deg) translate(5px, 5px);
     }
-
     .hamburger.active .bar:nth-child(2) {
       opacity: 0;
     }
-
     .hamburger.active .bar:nth-child(3) {
       transform: rotate(-45deg) translate(6px, -6px);
     }
-
     nav ul {
       list-style: none;
       display: flex;
@@ -88,7 +78,6 @@
       flex-wrap: wrap;
       transition: all 0.3s ease;
     }
-
     nav ul li a {
       text-decoration: none;
       color: white;
@@ -98,7 +87,6 @@
       position: relative;
       transition: all 0.3s ease;
     }
-
     nav ul li a::after {
       content: '';
       position: absolute;
@@ -110,33 +98,27 @@
       transition: all 0.3s ease;
       transform: translateX(-50%);
     }
-
     nav ul li a:hover::after {
       width: 100%;
     }
-
     nav ul li a:hover {
       color: #D4AF37;
       transform: scale(1.1);
     }
-
     nav ul li a.active {
       color: #D4AF37;
     }
-
     main {
       padding: 60px 20px;
       background-color: #ffffff;
     }
-
     h2 {
       font-size: 2rem;
       color: #002147;
       margin-bottom: 30px;
       text-align: center;
     }
-
-    .about p {
+    .about p, .about ul {
       font-size: 1rem;
       line-height: 1.7;
       margin-bottom: 20px;
@@ -144,7 +126,6 @@
       margin-left: auto;
       margin-right: auto;
     }
-
     footer {
       background-color: #f5f5f5;
       text-align: center;
@@ -153,41 +134,33 @@
       color: #777;
       border-top: 1px solid #ccc;
     }
-
     footer a {
       color: #002147;
       text-decoration: none;
     }
-
     footer a:hover {
       text-decoration: underline;
     }
-
     .language-switch-footer {
       margin-top: 10px;
       font-size: 0.95rem;
     }
-
     .language-switch-footer a {
       color: #002147;
       text-decoration: none;
       font-weight: bold;
       margin: 0 5px;
     }
-
     .language-switch-footer a:hover {
       text-decoration: underline;
     }
-
     @media only screen and (max-width: 768px) {
       header h1 {
         font-size: 1.8rem;
       }
-
       .hamburger {
         display: flex;
       }
-
       nav ul {
         display: none;
         flex-direction: column;
@@ -197,30 +170,24 @@
         opacity: 0;
         transform: translateY(-10px);
       }
-
       nav ul.show {
         display: flex;
         opacity: 1;
         transform: translateY(0);
       }
-
       nav ul li a {
         font-size: 1.1rem;
         padding: 8px;
       }
-
       main {
         padding: 40px 15px;
       }
-
       h2 {
         font-size: 1.6rem;
       }
-
       .about p {
         font-size: 0.95rem;
       }
-
       footer {
         font-size: 0.85rem;
         padding: 15px 10px;
@@ -253,13 +220,50 @@
     <div class="container">
       <section class="about">
         <h2>About Us</h2>
-        <p><strong>PANVENEDUX</strong> is a boutique consultancy founded on the principles of professionalism, integrity, and strategic clarity. Our mission is to be a long-term partner to businesses seeking not just growth, but meaningful and sustainable progress.</p>
 
-        <p>PANVENEDUX merges tradition with modern business practices to offer real solutions to complex challenges.</p>
+        <p><strong>Precision. Discretion. Resilience.</strong></p>
+        <p><strong>PANVENEDUX</strong> delivers strategic consultancy designed for leaders and organisations operating under real pressure — where clarity, governance, communication, and crisis resilience aren't optional; they're critical.</p>
+        <p>Founded by <strong>Mario Pokrovski</strong>, PANVENEDUX brings the discipline of international strategy, leadership development, and frontline operational advisory into a sharp, high-impact model for today’s complex world.</p>
 
-        <p>We don’t believe in templates or empty strategies. Instead, we take a tailored approach rooted in analytical precision and ethical consistency. We work with organisations that value quality over quantity and have a long-term perspective.</p>
+        <p>Our work is rooted in:</p>
+        <ul>
+          <li>Deep advisory experience across finance, defense, entertainment, and international policy</li>
+          <li>First-hand operational involvement in environments featuring global figures such as <strong>HRH Princess Noura Al Saud</strong> and <strong>Sarah, Duchess of York</strong>, and high-profile organisations like the <strong>Invictus Games</strong></li>
+          <li>Supporting executive clients at international platforms including the <strong>BAFTA Film Awards</strong>, <strong>US Academy Awards</strong>, and global investment and diplomatic events</li>
+        </ul>
 
-        <p>PANVENEDUX is for those who seek authenticity, intelligent positioning, and deep strategic support.</p>
+        <p>We know the demands of discretion, precision, and strategic calm — because we've lived them. PANVENEDUX channels this expertise into tailored solutions for organisations aiming to navigate complexity and drive sustainable growth.</p>
+
+        <h3>Founder Background</h3>
+        <p>Mario Pokrovski holds:</p>
+        <ul>
+          <li>A Distinction MSc in <strong>Security, Leadership, and Society</strong> from <strong>King’s College London</strong></li>
+          <li>A Certificate of Specialisation in <strong>Leadership & Management</strong> from <strong>Harvard Business School Online</strong>, including Organisational Leadership, Negotiation Mastery, and Power & Influence</li>
+          <li>Research and operations leadership experience at the <strong>London Stock Exchange Group</strong></li>
+          <li>Strategic advisory experience across private consultancy and public institutional sectors</li>
+        </ul>
+
+        <h3>Our Approach</h3>
+        <p>At PANVENEDUX, we don't offer "one-size-fits-all" solutions. Every engagement is built from first principles: understanding your specific context, clarifying your priorities, and designing sustainable, actionable strategies aligned with your real-world challenges.</p>
+
+        <p>We specialise in:</p>
+        <ul>
+          <li>Strategic analysis and organisational structuring</li>
+          <li>Governance design and decision-making frameworks</li>
+          <li>Cultural intelligence, communication positioning, and value alignment</li>
+          <li>Crisis preparation, resilience training, and operational calm</li>
+          <li>Financial innovation advisory, including responsible crypto strategy</li>
+        </ul>
+
+        <h3>Why PANVENEDUX?</h3>
+        <p><strong>We operate where it matters.</strong> From discreet stakeholder engagement in private finance to frontline advisory at global leadership events, our expertise is grounded, proven, and constantly evolving.</p>
+        <p><strong>We understand both sides.</strong> Boardroom diplomacy and operational execution aren’t separate worlds to us — they are interconnected realities we bridge for our clients.</p>
+        <p><strong>We deliver clarity in complexity.</strong> If your organisation needs clarity of action and alignment of structure, culture, and innovation, we are your trusted partner.</p>
+
+        <h3>Contact</h3>
+        <p>Ready to align, strengthen, and future-proof your strategy?<br>
+        <strong>Email:</strong> <a href="mailto:info@panvenedux.com">info@panvenedux.com</a></p>
+
       </section>
     </div>
   </main>
