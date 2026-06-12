@@ -158,12 +158,11 @@
     .hero-map {
       position: absolute;
       inset: 0;
-      opacity: 0;
-      z-index: 0;
+      z-index: 2;
       overflow: hidden;
-      -webkit-mask-image: linear-gradient(to bottom, black 0%, black 0%);
-      mask-image: linear-gradient(to bottom, black 0%, black 0%);
-      animation: mapReveal 2s 0.5s forwards ease-out;
+      opacity: 0;
+      animation: mapFade 1.5s 0.5s forwards ease-out;
+      pointer-events: none;
     }
 
     .hero-map svg {
@@ -173,9 +172,8 @@
       inset: 0;
     }
 
-    @keyframes mapReveal {
-      0%   { opacity: 0.06; -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 0%);     mask-image: linear-gradient(to bottom, black 0%, transparent 0%); }
-      100% { opacity: 0.06; -webkit-mask-image: linear-gradient(to bottom, black 100%, transparent 100%); mask-image: linear-gradient(to bottom, black 100%, transparent 100%); }
+    @keyframes mapFade {
+      to { opacity: 0.12; }
     }
 
     .hero-line {
@@ -184,7 +182,7 @@
       width: 1px; height: 0;
       background: linear-gradient(to bottom, transparent, var(--gold), transparent);
       animation: lineDown 2s 0.5s forwards ease-out;
-      z-index: 1;
+      z-index: 3;
     }
 
     @keyframes lineDown { to { height: 100%; } }
