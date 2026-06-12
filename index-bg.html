@@ -160,7 +160,7 @@
       inset: 0;
       z-index: 2;
       overflow: hidden;
-      opacity: 0.15;
+      opacity: 0.22;
       pointer-events: none;
     }
 
@@ -174,16 +174,17 @@
     .hero-line {
       position: absolute;
       top: 0; left: 50%;
-      width: 1px; height: 0;
+      width: 1px; height: 100%;
       background: linear-gradient(to bottom,
         transparent 0%,
-        var(--gold) 18%,
-        transparent 35%,
-        transparent 65%,
-        var(--gold) 82%,
+        var(--gold-light) 40%,
+        var(--gold) 50%,
+        var(--gold-light) 60%,
         transparent 100%
       );
-      animation: lineDown 2s 0.5s forwards ease-out;
+      transform: scaleY(0);
+      transform-origin: top center;
+      animation: lineDown 1.8s 0.5s forwards ease-out;
       z-index: 3;
     }
     @keyframes lineDown { to { height: 100%; } }
