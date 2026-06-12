@@ -185,27 +185,7 @@
       inset: 0;
     }
 
-    /* Animated gold line */
-    .hero-line {
-      position: absolute;
-      top: 0; left: 50%;
-      width: 1px;
-      height: 0;
-      background: linear-gradient(to bottom,
-        transparent 0%,
-        var(--gold) 15%,
-        transparent 38%,
-        transparent 62%,
-        var(--gold) 85%,
-        transparent 100%
-      );
-      animation: lineDown 2s 0.5s forwards ease-out;
-      z-index: 3;
-    }
-
-    @keyframes lineDown {
-      to { height: 100%; }
-    }
+    .hero-line { display: none; }
 
     .hero-content {
       position: relative;
@@ -800,79 +780,200 @@
       <div class="hero-grid"></div>
       <div class="hero-map">
         <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-          <!-- Latitude lines -->
-          <g stroke="#C9A84C" stroke-width="0.4" fill="none" opacity="0.9">
-            <line x1="0" y1="90" x2="1440" y2="90"/>
-            <line x1="0" y1="180" x2="1440" y2="180"/>
-            <line x1="0" y1="270" x2="1440" y2="270"/>
-            <line x1="0" y1="360" x2="1440" y2="360"/>
-            <line x1="0" y1="450" x2="1440" y2="450"/>
-            <line x1="0" y1="540" x2="1440" y2="540"/>
-            <line x1="0" y1="630" x2="1440" y2="630"/>
-            <line x1="0" y1="720" x2="1440" y2="720"/>
-            <line x1="0" y1="810" x2="1440" y2="810"/>
+          <defs>
+            <!-- Stipple dot pattern -->
+            <pattern id="stipple" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse">
+              <circle cx="3" cy="3" r="0.6" fill="#C9A84C" opacity="0.5"/>
+            </pattern>
+            <!-- Finer stipple -->
+            <pattern id="stipple2" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="0.4" fill="#C9A84C" opacity="0.35"/>
+            </pattern>
+          </defs>
+
+          <!-- Sea stipple texture -->
+          <rect x="0" y="0" width="1440" height="900" fill="url(#stipple)"/>
+
+          <!-- Graticule grid -->
+          <g stroke="#C9A84C" stroke-width="0.5" fill="none" opacity="0.6">
+            <line x1="0" y1="100" x2="1440" y2="100"/><line x1="0" y1="200" x2="1440" y2="200"/>
+            <line x1="0" y1="300" x2="1440" y2="300"/><line x1="0" y1="400" x2="1440" y2="400"/>
+            <line x1="0" y1="500" x2="1440" y2="500"/><line x1="0" y1="600" x2="1440" y2="600"/>
+            <line x1="0" y1="700" x2="1440" y2="700"/><line x1="0" y1="800" x2="1440" y2="800"/>
+            <line x1="120" y1="0" x2="120" y2="900"/><line x1="240" y1="0" x2="240" y2="900"/>
+            <line x1="360" y1="0" x2="360" y2="900"/><line x1="480" y1="0" x2="480" y2="900"/>
+            <line x1="600" y1="0" x2="600" y2="900"/><line x1="720" y1="0" x2="720" y2="900"/>
+            <line x1="840" y1="0" x2="840" y2="900"/><line x1="960" y1="0" x2="960" y2="900"/>
+            <line x1="1080" y1="0" x2="1080" y2="900"/><line x1="1200" y1="0" x2="1200" y2="900"/>
+            <line x1="1320" y1="0" x2="1320" y2="900"/>
           </g>
-          <!-- Longitude lines -->
-          <g stroke="#C9A84C" stroke-width="0.4" fill="none" opacity="0.9">
-            <line x1="144" y1="0" x2="144" y2="900"/>
-            <line x1="288" y1="0" x2="288" y2="900"/>
-            <line x1="432" y1="0" x2="432" y2="900"/>
-            <line x1="576" y1="0" x2="576" y2="900"/>
-            <line x1="720" y1="0" x2="720" y2="900"/>
-            <line x1="864" y1="0" x2="864" y2="900"/>
-            <line x1="1008" y1="0" x2="1008" y2="900"/>
-            <line x1="1152" y1="0" x2="1152" y2="900"/>
-            <line x1="1296" y1="0" x2="1296" y2="900"/>
+
+          <!-- Main compass rose rhumb lines (16 directions from 980,420) -->
+          <g stroke="#C9A84C" stroke-width="0.5" fill="none" opacity="0.55">
+            <line x1="980" y1="420" x2="980" y2="0"/>
+            <line x1="980" y1="420" x2="980" y2="900"/>
+            <line x1="980" y1="420" x2="0" y2="420"/>
+            <line x1="980" y1="420" x2="1440" y2="420"/>
+            <line x1="980" y1="420" x2="0" y2="0"/>
+            <line x1="980" y1="420" x2="1440" y2="0"/>
+            <line x1="980" y1="420" x2="0" y2="900"/>
+            <line x1="980" y1="420" x2="1440" y2="900"/>
+            <line x1="980" y1="420" x2="980" y2="0"/>
+            <line x1="980" y1="420" x2="560" y2="0"/>
+            <line x1="980" y1="420" x2="1400" y2="0"/>
+            <line x1="980" y1="420" x2="560" y2="900"/>
+            <line x1="980" y1="420" x2="1400" y2="900"/>
+            <line x1="980" y1="420" x2="0" y2="210"/>
+            <line x1="980" y1="420" x2="1440" y2="210"/>
+            <line x1="980" y1="420" x2="0" y2="630"/>
+            <line x1="980" y1="420" x2="1440" y2="630"/>
           </g>
-          <!-- Diagonal rhumb lines from compass rose -->
-          <g stroke="#C9A84C" stroke-width="0.3" fill="none" opacity="0.5">
-            <line x1="720" y1="450" x2="0" y2="0"/><line x1="720" y1="450" x2="1440" y2="0"/>
-            <line x1="720" y1="450" x2="0" y2="900"/><line x1="720" y1="450" x2="1440" y2="900"/>
-            <line x1="720" y1="450" x2="0" y2="450"/><line x1="720" y1="450" x2="1440" y2="450"/>
-            <line x1="720" y1="450" x2="720" y2="0"/><line x1="720" y1="450" x2="720" y2="900"/>
-            <line x1="720" y1="450" x2="200" y2="100"/><line x1="720" y1="450" x2="1240" y2="100"/>
-            <line x1="720" y1="450" x2="200" y2="800"/><line x1="720" y1="450" x2="1240" y2="800"/>
+          <!-- Secondary compass rose rhumb lines (from 300,600) -->
+          <g stroke="#C9A84C" stroke-width="0.4" fill="none" opacity="0.4">
+            <line x1="300" y1="600" x2="300" y2="0"/>
+            <line x1="300" y1="600" x2="300" y2="900"/>
+            <line x1="300" y1="600" x2="0" y2="600"/>
+            <line x1="300" y1="600" x2="1440" y2="600"/>
+            <line x1="300" y1="600" x2="0" y2="300"/>
+            <line x1="300" y1="600" x2="600" y2="0"/>
+            <line x1="300" y1="600" x2="0" y2="900"/>
+            <line x1="300" y1="600" x2="600" y2="900"/>
+            <line x1="300" y1="600" x2="1440" y2="300"/>
+            <line x1="300" y1="600" x2="1440" y2="900"/>
+            <line x1="300" y1="600" x2="0" y2="450"/>
+            <line x1="300" y1="600" x2="1440" y2="450"/>
+            <line x1="300" y1="600" x2="150" y2="0"/>
+            <line x1="300" y1="600" x2="450" y2="0"/>
           </g>
-          <!-- Faint coastline shapes -->
-          <g stroke="#C9A84C" stroke-width="0.8" fill="none" opacity="0.7">
-            <path d="M80,120 Q140,90 200,130 Q260,160 300,140 Q360,110 400,150 Q440,180 480,160 Q520,140 560,170 Q580,185 600,175"/>
-            <path d="M900,80 Q960,60 1020,100 Q1080,130 1140,110 Q1200,90 1260,120 Q1320,145 1380,130 Q1420,120 1440,125"/>
-            <path d="M0,380 Q60,360 120,390 Q180,415 240,400 Q300,382 360,410 Q400,428 440,415"/>
-            <path d="M1000,350 Q1060,330 1120,365 Q1180,395 1240,378 Q1300,358 1360,385 Q1410,405 1440,395"/>
-            <path d="M60,680 Q120,660 180,695 Q240,720 300,705 Q360,688 420,715 Q480,738 540,720 Q580,708 620,718"/>
-            <path d="M820,700 Q880,678 940,708 Q1000,732 1060,715 Q1120,698 1180,722 Q1240,742 1300,728 Q1360,712 1440,730"/>
-            <path d="M200,820 Q260,800 320,830 Q380,855 440,840 Q500,822 560,848"/>
-            <path d="M900,790 Q960,772 1020,800 Q1080,825 1140,810 Q1200,793 1260,818"/>
+
+          <!-- Detailed coastline left side -->
+          <g stroke="#C9A84C" stroke-width="1.2" fill="none" opacity="0.8">
+            <path d="M0,60 L15,55 Q30,48 45,62 L55,70 Q65,80 58,95 L50,108 Q42,120 52,132 L62,140 Q75,148 70,162 L60,175 Q50,188 62,198 L78,205 Q92,210 88,225 L80,240 Q72,255 85,265 L100,272 Q115,278 110,295 L98,312 Q88,325 100,338 L115,348 Q128,355 122,372 L110,388 Q100,402 114,412 L130,420 Q145,426 138,442 L125,458 Q115,472 128,482 L145,490 Q160,496 152,514 L138,530 Q128,545 142,555 L160,562 Q175,568 168,585 L155,600 Q145,615 158,625 L175,632 Q190,638 182,655 L168,672 Q158,686 172,695 L190,700 Q205,705 198,722 L184,738 Q174,752 188,762 L206,768 Q220,772 214,790 L200,808 Q190,822 204,832 L222,838 Q236,842 228,860 L214,876 Q204,888 218,896 L230,900"/>
           </g>
-          <!-- Compass rose (centre) -->
-          <g transform="translate(1200,180)" stroke="#C9A84C" fill="none" opacity="0.85">
-            <circle cx="0" cy="0" r="48" stroke-width="0.5"/>
-            <circle cx="0" cy="0" r="36" stroke-width="0.4"/>
-            <circle cx="0" cy="0" r="6" stroke-width="0.8"/>
-            <!-- Cardinal points -->
-            <polygon points="0,-48 5,-20 0,-28 -5,-20" fill="#C9A84C" opacity="0.7"/>
-            <polygon points="0,48 5,20 0,28 -5,20" fill="#C9A84C" opacity="0.4"/>
-            <polygon points="-48,0 -20,5 -28,0 -20,-5" fill="#C9A84C" opacity="0.4"/>
-            <polygon points="48,0 20,5 28,0 20,-5" fill="#C9A84C" opacity="0.4"/>
-            <!-- Intercardinal -->
-            <line x1="-34" y1="-34" x2="34" y2="34" stroke-width="0.4"/>
-            <line x1="34" y1="-34" x2="-34" y2="34" stroke-width="0.4"/>
-            <!-- Tick marks -->
-            <line x1="0" y1="-48" x2="0" y2="-42" stroke-width="1"/>
-            <line x1="0" y1="48" x2="0" y2="42" stroke-width="1"/>
-            <line x1="-48" y1="0" x2="-42" y2="0" stroke-width="1"/>
-            <line x1="48" y1="0" x2="42" y2="0" stroke-width="1"/>
+
+          <!-- Sailing ship silhouette (left-centre area) -->
+          <g transform="translate(420,310)" stroke="#C9A84C" stroke-width="0.8" fill="none" opacity="0.75">
+            <!-- Hull -->
+            <path d="M-38,28 Q-30,38 0,42 Q30,38 38,28 L30,22 Q15,26 0,27 Q-15,26 -30,22 Z"/>
+            <!-- Main mast -->
+            <line x1="0" y1="27" x2="0" y2="-65"/>
+            <!-- Fore mast -->
+            <line x1="-18" y1="20" x2="-18" y2="-40"/>
+            <!-- Mizzen mast -->
+            <line x1="18" y1="20" x2="18" y2="-30"/>
+            <!-- Main yards -->
+            <line x1="-28" y1="-20" x2="28" y2="-20"/>
+            <line x1="-22" y1="-42" x2="22" y2="-42"/>
+            <line x1="-14" y1="-58" x2="14" y2="-58"/>
+            <!-- Fore yards -->
+            <line x1="-32" y1="-8" x2="-4" y2="-8"/>
+            <line x1="-28" y1="-26" x2="-8" y2="-26"/>
+            <!-- Main sails (simplified) -->
+            <path d="M-28,-20 Q-14,-30 0,-27 Q14,-30 28,-20 L22,-42 Q11,-36 0,-34 Q-11,-36 -22,-42 Z" fill="#C9A84C" opacity="0.15"/>
+            <path d="M-22,-42 Q-11,-50 0,-48 Q11,-50 22,-42 L14,-58 Q7,-54 0,-53 Q-7,-54 -14,-58 Z" fill="#C9A84C" opacity="0.15"/>
+            <!-- Bowsprit -->
+            <line x1="-38" y1="18" x2="-65" y2="-8"/>
+            <!-- Rigging -->
+            <line x1="0" y1="-65" x2="-38" y2="18" stroke-width="0.4"/>
+            <line x1="0" y1="-65" x2="38" y2="18" stroke-width="0.4"/>
+            <line x1="-18" y1="-40" x2="-38" y2="18" stroke-width="0.4"/>
+            <line x1="18" y1="-30" x2="38" y2="18" stroke-width="0.4"/>
           </g>
-          <!-- Second smaller compass rose -->
-          <g transform="translate(280,700)" stroke="#C9A84C" fill="none" opacity="0.6">
+
+          <!-- Main compass rose at 980,420 -->
+          <g transform="translate(980,420)" stroke="#C9A84C" fill="none" opacity="0.9">
+            <!-- Outer rings -->
+            <circle cx="0" cy="0" r="72" stroke-width="0.8"/>
+            <circle cx="0" cy="0" r="60" stroke-width="0.5"/>
+            <circle cx="0" cy="0" r="48" stroke-width="0.4"/>
+            <circle cx="0" cy="0" r="20" stroke-width="0.8"/>
+            <circle cx="0" cy="0" r="8" stroke-width="1"/>
+            <!-- 32 tick marks on outer ring -->
+            <g stroke-width="0.6">
+              <line x1="0" y1="-72" x2="0" y2="-64"/>
+              <line x1="13.9" y1="-70.6" x2="12.4" y2="-62.8"/>
+              <line x1="27.4" y1="-66.3" x2="24.4" y2="-59"/>
+              <line x1="39.7" y1="-59.4" x2="35.3" y2="-52.8"/>
+              <line x1="50.9" y1="-50.9" x2="45.2" y2="-45.2"/>
+              <line x1="59.4" y1="-39.7" x2="52.8" y2="-35.3"/>
+              <line x1="66.3" y1="-27.4" x2="59" y2="-24.4"/>
+              <line x1="70.6" y1="-13.9" x2="62.8" y2="-12.4"/>
+              <line x1="72" y1="0" x2="64" y2="0"/>
+              <line x1="70.6" y1="13.9" x2="62.8" y2="12.4"/>
+              <line x1="66.3" y1="27.4" x2="59" y2="24.4"/>
+              <line x1="59.4" y1="39.7" x2="52.8" y2="35.3"/>
+              <line x1="50.9" y1="50.9" x2="45.2" y2="45.2"/>
+              <line x1="39.7" y1="59.4" x2="35.3" y2="52.8"/>
+              <line x1="27.4" y1="66.3" x2="24.4" y2="59"/>
+              <line x1="13.9" y1="70.6" x2="12.4" y2="62.8"/>
+              <line x1="0" y1="72" x2="0" y2="64"/>
+              <line x1="-13.9" y1="70.6" x2="-12.4" y2="62.8"/>
+              <line x1="-27.4" y1="66.3" x2="-24.4" y2="59"/>
+              <line x1="-39.7" y1="59.4" x2="-35.3" y2="52.8"/>
+              <line x1="-50.9" y1="50.9" x2="-45.2" y2="45.2"/>
+              <line x1="-59.4" y1="39.7" x2="-52.8" y2="35.3"/>
+              <line x1="-66.3" y1="27.4" x2="-59" y2="24.4"/>
+              <line x1="-70.6" y1="13.9" x2="-62.8" y2="12.4"/>
+              <line x1="-72" y1="0" x2="-64" y2="0"/>
+              <line x1="-70.6" y1="-13.9" x2="-62.8" y2="-12.4"/>
+              <line x1="-66.3" y1="-27.4" x2="-59" y2="-24.4"/>
+              <line x1="-59.4" y1="-39.7" x2="-52.8" y2="-35.3"/>
+              <line x1="-50.9" y1="-50.9" x2="-45.2" y2="-45.2"/>
+              <line x1="-39.7" y1="-59.4" x2="-35.3" y2="-52.8"/>
+              <line x1="-27.4" y1="-66.3" x2="-24.4" y2="-59"/>
+              <line x1="-13.9" y1="-70.6" x2="-12.4" y2="-62.8"/>
+            </g>
+            <!-- 16-point star -->
+            <polygon points="0,-60 4,-18 0,-28 -4,-18" fill="#C9A84C"/>
+            <polygon points="0,60 4,18 0,28 -4,18" fill="#C9A84C" opacity="0.7"/>
+            <polygon points="-60,0 -18,4 -28,0 -18,-4" fill="#C9A84C" opacity="0.7"/>
+            <polygon points="60,0 18,4 28,0 18,-4" fill="#C9A84C" opacity="0.7"/>
+            <polygon points="42.4,-42.4 6,-14 10,-22 -2,-10" fill="#C9A84C" opacity="0.5"/>
+            <polygon points="-42.4,-42.4 -6,-14 -10,-22 2,-10" fill="#C9A84C" opacity="0.5"/>
+            <polygon points="42.4,42.4 6,14 10,22 -2,10" fill="#C9A84C" opacity="0.5"/>
+            <polygon points="-42.4,42.4 -6,14 -10,22 2,10" fill="#C9A84C" opacity="0.5"/>
+            <!-- Fleur-de-lis hint on N -->
+            <path d="M0,-60 Q-3,-66 -2,-72 Q0,-75 2,-72 Q3,-66 0,-60" fill="#C9A84C"/>
+            <path d="M-4,-68 Q-7,-65 -6,-60 L0,-60 L6,-60 Q7,-65 4,-68" fill="none" stroke-width="0.6"/>
+          </g>
+
+          <!-- Small compass rose at 300,600 -->
+          <g transform="translate(300,640)" stroke="#C9A84C" fill="none" opacity="0.7">
+            <circle cx="0" cy="0" r="38" stroke-width="0.6"/>
             <circle cx="0" cy="0" r="28" stroke-width="0.4"/>
-            <circle cx="0" cy="0" r="4" stroke-width="0.6"/>
-            <polygon points="0,-28 3,-12 0,-16 -3,-12" fill="#C9A84C" opacity="0.6"/>
-            <polygon points="0,28 3,12 0,16 -3,12" fill="#C9A84C" opacity="0.3"/>
-            <polygon points="-28,0 -12,3 -16,0 -12,-3" fill="#C9A84C" opacity="0.3"/>
-            <polygon points="28,0 12,3 16,0 12,-3" fill="#C9A84C" opacity="0.3"/>
-            <line x1="-20" y1="-20" x2="20" y2="20" stroke-width="0.3"/>
-            <line x1="20" y1="-20" x2="-20" y2="20" stroke-width="0.3"/>
+            <circle cx="0" cy="0" r="10" stroke-width="0.6"/>
+            <circle cx="0" cy="0" r="4" stroke-width="0.8"/>
+            <polygon points="0,-38 3,-14 0,-20 -3,-14" fill="#C9A84C"/>
+            <polygon points="0,38 3,14 0,20 -3,14" fill="#C9A84C" opacity="0.6"/>
+            <polygon points="-38,0 -14,3 -20,0 -14,-3" fill="#C9A84C" opacity="0.6"/>
+            <polygon points="38,0 14,3 20,0 14,-3" fill="#C9A84C" opacity="0.6"/>
+            <polygon points="26.9,-26.9 4,-10 6,-16 -2,-6" fill="#C9A84C" opacity="0.4"/>
+            <polygon points="-26.9,-26.9 -4,-10 -6,-16 2,-6" fill="#C9A84C" opacity="0.4"/>
+            <polygon points="26.9,26.9 4,10 6,16 -2,6" fill="#C9A84C" opacity="0.4"/>
+            <polygon points="-26.9,26.9 -4,10 -6,16 2,6" fill="#C9A84C" opacity="0.4"/>
+          </g>
+
+          <!-- Decorative cartouche border (top-left) -->
+          <g stroke="#C9A84C" stroke-width="0.7" fill="none" opacity="0.6">
+            <rect x="20" y="20" width="180" height="80" rx="2"/>
+            <rect x="24" y="24" width="172" height="72" rx="1"/>
+            <line x1="20" y1="60" x2="200" y2="60" stroke-width="0.4"/>
+            <circle cx="20" cy="20" r="3" fill="#C9A84C" opacity="0.4"/>
+            <circle cx="200" cy="20" r="3" fill="#C9A84C" opacity="0.4"/>
+            <circle cx="20" cy="100" r="3" fill="#C9A84C" opacity="0.4"/>
+            <circle cx="200" cy="100" r="3" fill="#C9A84C" opacity="0.4"/>
+          </g>
+
+          <!-- Scale bar bottom -->
+          <g stroke="#C9A84C" stroke-width="0.8" fill="none" opacity="0.6" transform="translate(580,830)">
+            <line x1="0" y1="0" x2="200" y2="0"/>
+            <line x1="0" y1="-6" x2="0" y2="6"/>
+            <line x1="50" y1="-4" x2="50" y2="4"/>
+            <line x1="100" y1="-6" x2="100" y2="6"/>
+            <line x1="150" y1="-4" x2="150" y2="4"/>
+            <line x1="200" y1="-6" x2="200" y2="6"/>
+            <rect x="0" y="-3" width="50" height="6" fill="#C9A84C" opacity="0.2"/>
+            <rect x="100" y="-3" width="50" height="6" fill="#C9A84C" opacity="0.2"/>
           </g>
         </svg>
       </div>
