@@ -160,8 +160,7 @@
       inset: 0;
       z-index: 2;
       overflow: hidden;
-      opacity: 0;
-      animation: mapFade 1.5s 0.5s forwards ease-out;
+      opacity: 0.08;
       pointer-events: none;
     }
 
@@ -172,15 +171,18 @@
       inset: 0;
     }
 
-    @keyframes mapFade {
-      to { opacity: 0.12; }
-    }
-
     .hero-line {
       position: absolute;
       top: 0; left: 50%;
       width: 1px; height: 0;
-      background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+      background: linear-gradient(to bottom,
+        transparent 0%,
+        var(--gold) 15%,
+        transparent 38%,
+        transparent 62%,
+        var(--gold) 85%,
+        transparent 100%
+      );
       animation: lineDown 2s 0.5s forwards ease-out;
       z-index: 3;
     }
