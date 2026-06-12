@@ -2,22 +2,15 @@
 <html lang="bg">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Контакт | PANVENEDUX</title>
   <link rel="canonical" href="https://panvenedux.com/contact-bg.html" />
-
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FSSMM2HVX2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-FSSMM2HVX2');
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FSSMM2HVX2');</script>
   <style>
     *, *::before, *::after { box-sizing: border-box; }
     :root {
@@ -27,7 +20,6 @@
     }
     html { scroll-behavior: smooth; }
     body { margin:0; font-family:'Montserrat',sans-serif; background:var(--cream); color:var(--text); overflow-x:hidden; }
-
     header { position:fixed; top:0; left:0; right:0; z-index:900; background:transparent; transition:background 0.5s,backdrop-filter 0.5s,box-shadow 0.5s; }
     header.scrolled { background:rgba(0,24,48,0.96); backdrop-filter:blur(12px); box-shadow:0 1px 40px rgba(0,0,0,0.4); }
     .header-inner { display:flex; align-items:center; justify-content:space-between; max-width:1280px; margin:0 auto; padding:22px 48px; }
@@ -40,7 +32,6 @@
     nav ul li a:hover::after, nav ul li a.active::after { width:100%; }
     .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:4px; background:none; border:none; }
     .hamburger span { display:block; width:24px; height:1.5px; background:white; transition:all 0.3s; }
-
     .page-hero { background:var(--navy); padding:160px 24px 80px; text-align:center; position:relative; overflow:hidden; }
     .page-hero::before { content:''; position:absolute; inset:0; background-image:linear-gradient(rgba(201,168,76,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,0.04) 1px,transparent 1px); background-size:60px 60px; }
     .page-hero-label { display:inline-block; font-size:0.68rem; letter-spacing:0.35em; text-transform:uppercase; color:var(--gold); margin-bottom:20px; position:relative; }
@@ -49,26 +40,9 @@
     .page-hero-label::after  { left:calc(100% + 12px); }
     .page-hero h1 { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(2.4rem,5vw,4rem); color:#fff; margin:0; line-height:1.15; position:relative; }
     .page-hero h1 em { font-style:italic; color:var(--gold-light); }
-
     .ornament { display:flex; align-items:center; justify-content:center; gap:18px; padding:64px 0 0; }
     .ornament-line { flex:1; max-width:220px; height:1px; background:linear-gradient(to right,transparent,var(--gold),transparent); }
     .ornament-diamond { width:8px; height:8px; background:var(--gold); transform:rotate(45deg); }
-
-    .contact-section { padding:80px 24px 100px; background:var(--cream); }
-    .contact-inner { max-width:640px; margin:0 auto; }
-    .contact-intro { font-size:0.88rem; line-height:1.95; color:var(--text-muted); margin-bottom:28px; }
-    .contact-email-link { display:inline-flex; align-items:center; gap:10px; font-family:'Cormorant Garamond',serif; font-size:1.3rem; color:var(--navy); text-decoration:none; margin-bottom:56px; border-bottom:1px solid rgba(201,168,76,0.4); padding-bottom:8px; transition:color 0.3s,border-color 0.3s; }
-    .contact-email-link:hover { color:var(--gold); border-color:var(--gold); }
-
-    form { display:flex; flex-direction:column; gap:20px; }
-    .form-group { display:flex; flex-direction:column; gap:6px; }
-    label { font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--text-muted); font-weight:500; }
-    input, textarea { padding:14px 16px; font-size:0.88rem; border:1px solid rgba(201,168,76,0.25); border-radius:0; background:white; font-family:'Montserrat',sans-serif; color:var(--text); transition:border-color 0.3s; outline:none; }
-    input:focus, textarea:focus { border-color:var(--gold); }
-    textarea { resize:vertical; min-height:140px; }
-    .form-submit { display:inline-flex; align-items:center; gap:12px; padding:16px 44px; background:var(--navy); color:var(--gold-light); font-size:0.75rem; letter-spacing:0.22em; text-transform:uppercase; font-weight:500; border:1px solid var(--navy); cursor:pointer; font-family:'Montserrat',sans-serif; transition:background 0.35s,color 0.35s,border-color 0.35s; align-self:flex-start; }
-    .form-submit:hover { background:var(--gold); color:var(--navy); border-color:var(--gold); }
-
     footer { background:var(--navy); border-top:1px solid rgba(201,168,76,0.2); padding:48px 24px; text-align:center; }
     .footer-logo { font-family:'Cormorant Garamond',serif; font-weight:600; font-size:1.4rem; color:rgba(255,255,255,0.6); letter-spacing:0.18em; margin-bottom:20px; }
     footer p { margin:0 0 8px; font-size:0.78rem; color:rgba(255,255,255,0.35); letter-spacing:0.05em; }
@@ -76,7 +50,6 @@
     footer a:hover { color:var(--gold-light); }
     .language-switch-footer { margin-top:16px; font-size:0.72rem; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.25); }
     .language-switch-footer a { color:rgba(255,255,255,0.45); margin:0 8px; }
-
     .cookie-banner { position:fixed; bottom:24px; left:50%; transform:translateX(-50%); background:rgba(0,24,48,0.97); backdrop-filter:blur(16px); color:white; padding:20px 28px; display:none; align-items:center; z-index:1000; box-shadow:0 8px 40px rgba(0,0,0,0.5); border:1px solid rgba(201,168,76,0.25); border-radius:2px; max-width:780px; width:90%; flex-wrap:wrap; gap:16px; }
     .cookie-banner p { margin:0; font-size:0.8rem; color:rgba(255,255,255,0.65); line-height:1.6; flex:1; }
     .cookie-banner .cookie-btns { display:flex; gap:10px; flex-shrink:0; }
@@ -85,7 +58,6 @@
     #accept-cookies:hover { background:var(--gold-light); }
     #decline-cookies { background:transparent; color:rgba(255,255,255,0.55); border-color:rgba(255,255,255,0.2); }
     #decline-cookies:hover { border-color:rgba(255,255,255,0.5); color:white; }
-
     @media (max-width:768px) {
       .header-inner { padding:18px 24px; }
       nav ul { display:none; }
@@ -96,101 +68,106 @@
       .cookie-banner { flex-direction:column; align-items:stretch; }
       .cookie-btns { width:100%; }
       .cookie-btns button { flex:1; }
-      .form-submit { align-self:stretch; justify-content:center; }
     }
     .reveal { opacity:0; transform:translateY(24px); transition:opacity 0.7s,transform 0.7s; }
     .reveal.visible { opacity:1; transform:translateY(0); }
+
+    /* Contact page styles */
+    .contact-section { padding:80px 24px 100px; background:var(--cream); }
+    .contact-inner { max-width:680px; margin:0 auto; }
+    .contact-intro { font-size:0.88rem; line-height:1.95; color:var(--text-muted); margin-bottom:40px; }
+    .contact-email { display:inline-flex; align-items:center; gap:10px; font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--navy); text-decoration:none; margin-bottom:56px; border-bottom:1px solid rgba(201,168,76,0.4); padding-bottom:8px; transition:color 0.3s,border-color 0.3s; }
+    .contact-email:hover { color:var(--gold); border-color:var(--gold); }
+    form { display:flex; flex-direction:column; gap:20px; }
+    .form-group { display:flex; flex-direction:column; gap:6px; }
+    label { font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--text-muted); }
+    input, textarea { padding:14px 16px; font-size:0.88rem; border:1px solid rgba(201,168,76,0.25); border-radius:0; background:white; font-family:'Montserrat',sans-serif; color:var(--text); transition:border-color 0.3s; outline:none; }
+    input:focus, textarea:focus { border-color:var(--gold); }
+    textarea { resize:vertical; min-height:140px; }
+    .form-submit { display:inline-flex; align-items:center; gap:12px; padding:16px 44px; background:var(--navy); color:var(--gold-light); font-size:0.75rem; letter-spacing:0.22em; text-transform:uppercase; font-weight:500; border:1px solid var(--navy); cursor:pointer; font-family:'Montserrat',sans-serif; transition:background 0.35s,color 0.35s,border-color 0.35s; align-self:flex-start; }
+    .form-submit:hover { background:var(--gold); color:var(--navy); border-color:var(--gold); }
   </style>
 </head>
 <body>
 
-  <header id="site-header">
-    <div class="header-inner">
-      <a class="logo" href="index-bg.html">PAN<span>VENEDUX</span></a>
-      <div class="hamburger" onclick="toggleMenu()" aria-label="Навигация"><span></span><span></span><span></span></div>
-      <nav>
-        <ul id="nav-menu">
-          <li><a href="index-bg.html">Начало</a></li>
-          <li><a href="about-bg.html">За нас</a></li>
-          <li><a href="services-bg.html">Услуги</a></li>
-          <li><a href="contact-bg.html" class="active">Контакт</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <div class="page-hero">
-      <span class="page-hero-label">Свържете се</span>
-      <h1>Пишете <em>ни</em></h1>
-    </div>
-
-    <div class="ornament reveal">
-      <div class="ornament-line"></div>
-      <div class="ornament-diamond"></div>
-      <div class="ornament-line"></div>
-    </div>
-
-    <section class="contact-section">
-      <div class="contact-inner reveal">
-        <p class="contact-intro">Ако желаете да обсъдим потенциално партньорство или имате въпрос, не се колебайте да ни пишете директно или чрез формата по-долу:</p>
-        <a class="contact-email-link" href="mailto:info@panvenedux.com">info@panvenedux.com</a>
-
-        <form action="https://formspree.io/f/mnnpdllg" method="POST">
-          <input type="hidden" name="_subject" value="Ново съобщение от сайта PANVENEDUX" />
-          <div class="form-group">
-            <label for="name">Име</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Имейл адрес</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          <div class="form-group">
-            <label for="message">Съобщение</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
-          </div>
-          <button type="submit" class="form-submit">
-            Изпрати
-            <svg width="14" height="9" viewBox="0 0 14 9" fill="none">
-              <path d="M0 4.5h12M8.5 1l3.5 3.5-3.5 3.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-logo">PANVENEDUX</div>
-    <p>&copy; 2025 PANVENEDUX. Всички права запазени.</p>
-    <p>Имейл: <a href="mailto:info@panvenedux.com">info@panvenedux.com</a></p>
-    <p class="language-switch-footer">
-      <a href="contact.html">English</a> &nbsp;|&nbsp; <a href="contact-bg.html">&#1041;&#1098;&#1083;&#1075;&#1072;&#1088;&#1089;&#1082;&#1080;</a>
-    </p>
-  </footer>
-
-  <div id="cookie-banner" class="cookie-banner">
-    <p>Този сайт използва бисквитки, за да подобри Вашето изживяване. Приемате ли?</p>
-    <div class="cookie-btns">
-      <button id="accept-cookies">Приемам</button>
-      <button id="decline-cookies">Отказвам</button>
-    </div>
+<header id="site-header">
+  <div class="header-inner">
+    <a class="logo" href="index-bg.html">PAN<span>VENEDUX</span></a>
+    <div class="hamburger" onclick="toggleMenu()" aria-label="Меню"><span></span><span></span><span></span></div>
+    <nav><ul id="nav-menu">
+      <li><a href="index-bg.html">Начало</a></li>
+      <li><a href="about-bg.html">За нас</a></li>
+      <li><a href="services-bg.html">Услуги</a></li>
+      <li><a href="contact-bg.html" class="active">Контакт</a></li>
+    </ul></nav>
   </div>
+</header>
 
-  <script>
-    function toggleMenu(){document.getElementById('nav-menu').classList.toggle('show');}
-    const hdr=document.getElementById('site-header');
-    window.addEventListener('scroll',()=>hdr.classList.toggle('scrolled',window.scrollY>60));
-    const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.12});
-    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-    document.addEventListener('DOMContentLoaded',function(){
-      const b=document.getElementById('cookie-banner');
-      if(!localStorage.getItem('cookieConsent'))b.style.display='flex';
-      document.getElementById('accept-cookies').addEventListener('click',()=>{localStorage.setItem('cookieConsent','accepted');b.style.display='none';});
-      document.getElementById('decline-cookies').addEventListener('click',()=>{localStorage.setItem('cookieConsent','declined');b.style.display='none';});
-    });
-  </script>
+<section class="page-hero">
+  <div class="page-hero-label">Свържете се</div>
+  <h1>Пишете <em>ни</em></h1>
+  <div class="ornament">
+    <div class="ornament-line"></div>
+    <div class="ornament-diamond"></div>
+    <div class="ornament-line"></div>
+  </div>
+</section>
 
+<section class="contact-section">
+  <div class="contact-inner reveal">
+    <p class="contact-intro">Ако желаете да обсъдим потенциално партньорство или имате въпрос, не се колебайте да ни пишете директно или чрез формата по-долу:</p>
+    <a class="contact-email" href="mailto:info@panvenedux.com">info@panvenedux.com</a>
+    <form action="https://formspree.io/f/mnnpdllg" method="POST">
+      <input type="hidden" name="_subject" value="Ново съобщение от сайта PANVENEDUX" />
+      <div class="form-group">
+        <label for="name">Име</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Имейл адрес</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label for="message">Съобщение</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+      </div>
+      <button class="form-submit" type="submit">
+        Изпрати
+        <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M0 4.5h12M8.5 1l3.5 3.5-3.5 3.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">PANVENEDUX</div>
+  <p>&copy; 2025 PANVENEDUX. Всички права запазени.</p>
+  <p>Имейл: <a href="mailto:info@panvenedux.com">info@panvenedux.com</a></p>
+  <p class="language-switch-footer"><a href="contact.html">English</a> &nbsp;|&nbsp; <a href="contact-bg.html">&#1041;&#1098;&#1083;&#1075;&#1072;&#1088;&#1089;&#1082;&#1080;</a></p>
+</footer>
+
+<div id="cookie-banner" class="cookie-banner">
+  <p>Този сайт използва бисквитки, за да подобри Вашето изживяване. Приемате ли?</p>
+  <div class="cookie-btns">
+    <button id="accept-cookies">Приемам</button>
+    <button id="decline-cookies">Отказвам</button>
+  </div>
+</div>
+
+<script>
+  function toggleMenu(){document.getElementById('nav-menu').classList.toggle('show');}
+  const hdr=document.getElementById('site-header');
+  window.addEventListener('scroll',()=>hdr.classList.toggle('scrolled',window.scrollY>60));
+  const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+  document.addEventListener('DOMContentLoaded',function(){
+    const b=document.getElementById('cookie-banner');
+    if(!localStorage.getItem('cookieConsent'))b.style.display='flex';
+    document.getElementById('accept-cookies').addEventListener('click',()=>{localStorage.setItem('cookieConsent','accepted');b.style.display='none';});
+    document.getElementById('decline-cookies').addEventListener('click',()=>{localStorage.setItem('cookieConsent','declined');b.style.display='none';});
+  });
+</script>
 </body>
 </html>
