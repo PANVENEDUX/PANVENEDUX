@@ -168,6 +168,30 @@
       background-size: 60px 60px;
     }
 
+    /* Nautical map texture */
+    .hero-map {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      z-index: 0;
+      overflow: hidden;
+      -webkit-mask-image: linear-gradient(to bottom, black 0%, black 0%);
+      mask-image: linear-gradient(to bottom, black 0%, black 0%);
+      animation: mapReveal 2s 0.5s forwards ease-out;
+    }
+
+    .hero-map svg {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      inset: 0;
+    }
+
+    @keyframes mapReveal {
+      0%   { opacity: 0.06; -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 0%);   mask-image: linear-gradient(to bottom, black 0%, transparent 0%); }
+      100% { opacity: 0.06; -webkit-mask-image: linear-gradient(to bottom, black 100%, transparent 100%); mask-image: linear-gradient(to bottom, black 100%, transparent 100%); }
+    }
+
     /* Animated gold line */
     .hero-line {
       position: absolute;
@@ -176,6 +200,7 @@
       height: 0;
       background: linear-gradient(to bottom, transparent, var(--gold), transparent);
       animation: lineDown 2s 0.5s forwards ease-out;
+      z-index: 1;
     }
 
     @keyframes lineDown {
@@ -772,6 +797,84 @@
     <section class="hero">
       <div class="hero-bg"></div>
       <div class="hero-grid"></div>
+      <div class="hero-map">
+        <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <!-- Latitude lines -->
+          <g stroke="#C9A84C" stroke-width="0.4" fill="none" opacity="0.9">
+            <line x1="0" y1="90" x2="1440" y2="90"/>
+            <line x1="0" y1="180" x2="1440" y2="180"/>
+            <line x1="0" y1="270" x2="1440" y2="270"/>
+            <line x1="0" y1="360" x2="1440" y2="360"/>
+            <line x1="0" y1="450" x2="1440" y2="450"/>
+            <line x1="0" y1="540" x2="1440" y2="540"/>
+            <line x1="0" y1="630" x2="1440" y2="630"/>
+            <line x1="0" y1="720" x2="1440" y2="720"/>
+            <line x1="0" y1="810" x2="1440" y2="810"/>
+          </g>
+          <!-- Longitude lines -->
+          <g stroke="#C9A84C" stroke-width="0.4" fill="none" opacity="0.9">
+            <line x1="144" y1="0" x2="144" y2="900"/>
+            <line x1="288" y1="0" x2="288" y2="900"/>
+            <line x1="432" y1="0" x2="432" y2="900"/>
+            <line x1="576" y1="0" x2="576" y2="900"/>
+            <line x1="720" y1="0" x2="720" y2="900"/>
+            <line x1="864" y1="0" x2="864" y2="900"/>
+            <line x1="1008" y1="0" x2="1008" y2="900"/>
+            <line x1="1152" y1="0" x2="1152" y2="900"/>
+            <line x1="1296" y1="0" x2="1296" y2="900"/>
+          </g>
+          <!-- Diagonal rhumb lines from compass rose -->
+          <g stroke="#C9A84C" stroke-width="0.3" fill="none" opacity="0.5">
+            <line x1="720" y1="450" x2="0" y2="0"/><line x1="720" y1="450" x2="1440" y2="0"/>
+            <line x1="720" y1="450" x2="0" y2="900"/><line x1="720" y1="450" x2="1440" y2="900"/>
+            <line x1="720" y1="450" x2="0" y2="450"/><line x1="720" y1="450" x2="1440" y2="450"/>
+            <line x1="720" y1="450" x2="720" y2="0"/><line x1="720" y1="450" x2="720" y2="900"/>
+            <line x1="720" y1="450" x2="200" y2="100"/><line x1="720" y1="450" x2="1240" y2="100"/>
+            <line x1="720" y1="450" x2="200" y2="800"/><line x1="720" y1="450" x2="1240" y2="800"/>
+          </g>
+          <!-- Faint coastline shapes -->
+          <g stroke="#C9A84C" stroke-width="0.8" fill="none" opacity="0.7">
+            <path d="M80,120 Q140,90 200,130 Q260,160 300,140 Q360,110 400,150 Q440,180 480,160 Q520,140 560,170 Q580,185 600,175"/>
+            <path d="M900,80 Q960,60 1020,100 Q1080,130 1140,110 Q1200,90 1260,120 Q1320,145 1380,130 Q1420,120 1440,125"/>
+            <path d="M0,380 Q60,360 120,390 Q180,415 240,400 Q300,382 360,410 Q400,428 440,415"/>
+            <path d="M1000,350 Q1060,330 1120,365 Q1180,395 1240,378 Q1300,358 1360,385 Q1410,405 1440,395"/>
+            <path d="M60,680 Q120,660 180,695 Q240,720 300,705 Q360,688 420,715 Q480,738 540,720 Q580,708 620,718"/>
+            <path d="M820,700 Q880,678 940,708 Q1000,732 1060,715 Q1120,698 1180,722 Q1240,742 1300,728 Q1360,712 1440,730"/>
+            <path d="M200,820 Q260,800 320,830 Q380,855 440,840 Q500,822 560,848"/>
+            <path d="M900,790 Q960,772 1020,800 Q1080,825 1140,810 Q1200,793 1260,818"/>
+          </g>
+          <!-- Compass rose (centre) -->
+          <g transform="translate(1200,180)" stroke="#C9A84C" fill="none" opacity="0.85">
+            <circle cx="0" cy="0" r="48" stroke-width="0.5"/>
+            <circle cx="0" cy="0" r="36" stroke-width="0.4"/>
+            <circle cx="0" cy="0" r="6" stroke-width="0.8"/>
+            <!-- Cardinal points -->
+            <polygon points="0,-48 5,-20 0,-28 -5,-20" fill="#C9A84C" opacity="0.7"/>
+            <polygon points="0,48 5,20 0,28 -5,20" fill="#C9A84C" opacity="0.4"/>
+            <polygon points="-48,0 -20,5 -28,0 -20,-5" fill="#C9A84C" opacity="0.4"/>
+            <polygon points="48,0 20,5 28,0 20,-5" fill="#C9A84C" opacity="0.4"/>
+            <!-- Intercardinal -->
+            <line x1="-34" y1="-34" x2="34" y2="34" stroke-width="0.4"/>
+            <line x1="34" y1="-34" x2="-34" y2="34" stroke-width="0.4"/>
+            <!-- Tick marks -->
+            <line x1="0" y1="-48" x2="0" y2="-42" stroke-width="1"/>
+            <line x1="0" y1="48" x2="0" y2="42" stroke-width="1"/>
+            <line x1="-48" y1="0" x2="-42" y2="0" stroke-width="1"/>
+            <line x1="48" y1="0" x2="42" y2="0" stroke-width="1"/>
+          </g>
+          <!-- Second smaller compass rose -->
+          <g transform="translate(280,700)" stroke="#C9A84C" fill="none" opacity="0.6">
+            <circle cx="0" cy="0" r="28" stroke-width="0.4"/>
+            <circle cx="0" cy="0" r="4" stroke-width="0.6"/>
+            <polygon points="0,-28 3,-12 0,-16 -3,-12" fill="#C9A84C" opacity="0.6"/>
+            <polygon points="0,28 3,12 0,16 -3,12" fill="#C9A84C" opacity="0.3"/>
+            <polygon points="-28,0 -12,3 -16,0 -12,-3" fill="#C9A84C" opacity="0.3"/>
+            <polygon points="28,0 12,3 16,0 12,-3" fill="#C9A84C" opacity="0.3"/>
+            <line x1="-20" y1="-20" x2="20" y2="20" stroke-width="0.3"/>
+            <line x1="20" y1="-20" x2="-20" y2="20" stroke-width="0.3"/>
+          </g>
+        </svg>
+      </div>
       <div class="hero-line"></div>
 
       <div class="hero-content">
