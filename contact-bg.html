@@ -96,6 +96,47 @@
     textarea { resize:vertical; min-height:140px; }
     .form-submit { display:inline-flex; align-items:center; gap:12px; padding:16px 44px; background:var(--navy); color:var(--gold-light); font-size:0.75rem; letter-spacing:0.22em; text-transform:uppercase; font-weight:500; border:1px solid var(--navy); cursor:pointer; font-family:'Montserrat',sans-serif; transition:background 0.35s,color 0.35s,border-color 0.35s; align-self:flex-start; }
     .form-submit:hover { background:var(--gold); color:var(--navy); border-color:var(--gold); }
+
+    .linkedin-notice {
+      margin-top: 56px;
+      padding: 36px 40px;
+      border: 1px solid rgba(201,168,76,0.18);
+      border-left: 3px solid var(--gold);
+      background: rgba(201,168,76,0.03);
+      max-width: 660px;
+    }
+    .linkedin-notice-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.68rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+    .linkedin-notice p {
+      font-size: 0.78rem;
+      line-height: 1.9;
+      color: var(--text-muted);
+      margin: 0 0 14px;
+    }
+    .linkedin-notice p:last-child { margin-bottom: 0; }
+    .linkedin-notice a { color: var(--gold); text-decoration: none; }
+    .linkedin-notice a:hover { color: var(--gold-light); }
+    .linkedin-notice-contact {
+      margin-top: 20px !important;
+      padding-top: 20px;
+      border-top: 1px solid rgba(201,168,76,0.15);
+      color: var(--text) !important;
+    }
+    .linkedin-notice-footer {
+      font-size: 0.72rem !important;
+      color: rgba(107,107,128,0.7) !important;
+      font-style: italic;
+      margin-top: 12px !important;
+    }
   </style>
   <script type="application/ld+json">
   {
@@ -166,6 +207,23 @@
         </svg>
       </button>
     </form>
+
+    <div class="linkedin-notice">
+      <div class="linkedin-notice-header">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="7" r="6.5" stroke="currentColor" stroke-width="1"/><path d="M7 6v4M7 4.5v.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        Уведомление за поверителност – Генериране на потенциални клиенти в LinkedIn
+      </div>
+      <p>PANVENEDUX зачита вашата поверителност и е ангажирана със защитата на вашите лични данни.</p>
+      <p>Когато подавате информация чрез формуляр за генериране на потенциални клиенти на PANVENEDUX в LinkedIn, предоставените от вас лични данни могат да включват вашето име, бизнес данни за контакт, длъжност, информация за компанията и всяка друга информация, която изберете да предоставите чрез формуляра.</p>
+      <p>Използваме тази информация с цел отговор на вашето запитване, разбиране на вашите бизнес нужди, предоставяне на информация за стратегическите консултантски услуги на PANVENEDUX и, където е уместно, иницииране на дискусии относно потенциално бизнес сътрудничество.</p>
+      <p>Вашите лични данни ще бъдат обработвани само при наличие на подходящо правно основание съгласно приложимото законодателство за защита на данните, включително Общия регламент относно защитата на данните (ЕС) 2016/679 („GDPR"). Когато обработването се основава на вашето съгласие, можете да оттеглите това съгласие по всяко време.</p>
+      <p>Ние не продаваме вашите лични данни. Вашата информация може да бъде достъпна за упълномощени доставчици на услуги или технологични платформи, използвани от PANVENEDUX, когато това е необходимо за горепосочените цели и при подходящи гаранции за защита на данните. Информацията, подадена чрез LinkedIn, се обработва и от LinkedIn в съответствие с неговите собствени условия за поверителност.</p>
+      <p>Съхраняваме лични данни само толкова дълго, колкото е разумно необходимо за целите, за които са събрани, и за изпълнение на приложимите правни, регулаторни и бизнес изисквания.</p>
+      <p>Съгласно приложимото право може да имате право да поискате достъп до вашите лични данни, тяхното коригиране или изтриване, да ограничите или възразите срещу определено обработване, да поискате преносимост на данните и да оттеглите съгласието си. Може също да имате право да подадете жалба до компетентния надзорен орган за защита на данните.</p>
+      <p class="linkedin-notice-contact">За въпроси относно вашите лични данни или за упражняване на правата ви за защита на данните, моля, свържете се с:<br>
+      <strong>PANVENEDUX</strong> &nbsp;—&nbsp; <a href="mailto:info@panvenedux.com">info@panvenedux.com</a></p>
+      <p class="linkedin-notice-footer">Това уведомление трябва да се чете заедно с пълната <a href="/privacy-bg.html">Политика за поверителност на PANVENEDUX</a>.</p>
+    </div>
   </div>
 </section>
 
