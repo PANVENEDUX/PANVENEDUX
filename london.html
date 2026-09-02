@@ -452,6 +452,91 @@
       .hero-eyebrow::before, .hero-eyebrow::after { display: none; }
     }
 
+    /* ── PRICING GRID ── */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: rgba(201,168,76,0.15);
+      margin: 40px 0 0;
+      max-width: 760px;
+    }
+
+    .pricing-card {
+      background: var(--cream);
+      padding: 48px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .pricing-card--featured {
+      background: var(--navy);
+    }
+
+    .pricing-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .pricing-amount {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 300;
+      color: var(--navy);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .pricing-card--featured .pricing-amount { color: #fff; }
+
+    .pricing-per {
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+    }
+
+    .pricing-card--featured .pricing-per { color: rgba(255,255,255,0.45); }
+
+    .pricing-includes {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 36px;
+      flex: 1;
+    }
+
+    .pricing-includes li {
+      font-size: 0.8rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+      padding: 7px 0 7px 18px;
+      position: relative;
+      border-bottom: 1px solid rgba(201,168,76,0.1);
+    }
+
+    .pricing-card--featured .pricing-includes li {
+      color: rgba(255,255,255,0.55);
+      border-bottom-color: rgba(255,255,255,0.07);
+    }
+
+    .pricing-includes li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 50%;
+      width: 7px; height: 1px;
+      background: var(--gold);
+    }
+
+    @media (max-width: 600px) {
+      .pricing-grid { grid-template-columns: 1fr; }
+      .pricing-card { padding: 36px 28px; }
+    }
+
     /* ── REDUCED MOTION ── */
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation: none !important; transition: none !important; }
@@ -470,10 +555,10 @@
     <div class="hero-inner">
       <div class="hero-eyebrow">One-to-one preparation</div>
       <h1>You have one chance<br>to get this <em>right.</em></h1>
-      <p class="hero-sub">A single preparation session for the speech, eulogy, presentation, or address that matters most. Fixed fee. No retainer.</p>
-      <div class="fee-badge">£600 &nbsp;·&nbsp; Fixed Fee &nbsp;·&nbsp; One Session</div>
+      <p class="hero-sub">One-to-one preparation for the speech, eulogy, presentation, or address that matters most. Two ways to work together.</p>
+      <div class="fee-badge">From €300 per session &nbsp;·&nbsp; No retainer</div>
       <br>
-      <a href="[BOOKING LINK]" class="cta-btn">Book Your Session</a>
+      <a href="#pricing" class="cta-btn">See Pricing</a>
     </div>
   </section>
 
@@ -529,7 +614,7 @@
         <li>Any high-stakes spoken occasion</li>
       </ul>
 
-      <a href="[BOOKING LINK]" class="cta-btn">Book Your Session</a>
+      <a href="#pricing" class="cta-btn">See Pricing</a>
     </div>
   </section>
 
@@ -552,11 +637,37 @@
   <!-- Price + final CTA -->
   <section class="price-section">
     <div class="price-inner">
-      <h2>Ready when you are</h2>
-      <p>One session. One fixed fee. Book a time that works and we begin from there.</p>
-      <div class="price-tag">£600</div>
-      <div class="price-note">Fixed fee &nbsp;·&nbsp; No retainer &nbsp;·&nbsp; Confirmation by return</div>
-      <a href="[BOOKING LINK]" class="cta-btn">Book Your Session</a>
+      <h2 id="pricing">Two ways to work together</h2>
+      <p>Choose the level of engagement that fits your occasion and timeline.</p>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-label">Session</div>
+          <div class="pricing-amount">€300</div>
+          <div class="pricing-per">per hour</div>
+          <ul class="pricing-includes">
+            <li>Single working session</li>
+            <li>Writing, delivery, or nerves — your priority</li>
+            <li>Book as many sessions as you need</li>
+            <li>Confirmation by return</li>
+          </ul>
+          <a href="[BOOKING LINK]" class="cta-btn">Book a Session</a>
+        </div>
+
+        <div class="pricing-card pricing-card--featured">
+          <div class="pricing-label">Full Package</div>
+          <div class="pricing-amount">€2,800</div>
+          <div class="pricing-per">one-time payment</div>
+          <ul class="pricing-includes">
+            <li>Complete engagement preparation</li>
+            <li>Speech writing from brief to final draft</li>
+            <li>Multiple rehearsal sessions</li>
+            <li>Delivery coaching &amp; nerves management</li>
+            <li>Available until the occasion</li>
+          </ul>
+          <a href="[BOOKING LINK]" class="cta-btn">Book Full Package</a>
+        </div>
+      </div>
     </div>
   </section>
 
