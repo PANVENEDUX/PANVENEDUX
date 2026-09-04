@@ -123,7 +123,7 @@
     .nav-dropdown { position: relative; }
     .nav-dropdown > a { cursor: default; }
     .dropdown-menu {
-      display: none;
+      opacity: 0; visibility: hidden; transition: opacity 0.2s, visibility 0s linear 1.2s;
       position: absolute;
       top: 100%;
       left: 50%;
@@ -136,7 +136,7 @@
       padding: 16px 0 8px;
     }
     .nav-dropdown:hover .dropdown-menu,
-    .nav-dropdown.open .dropdown-menu { display: block; }
+    .nav-dropdown.open .dropdown-menu { opacity: 1; visibility: visible; transition: opacity 0.2s, visibility 0s; }
     .dropdown-menu a {
       display: block;
       padding: 12px 24px;

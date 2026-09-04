@@ -130,7 +130,7 @@
 
     @media (max-width: 768px) {
       .header-inner { padding: 18px 24px; }
-      nav ul { display: none; }
+      nav ul { display: flex; }
       .hamburger { display: flex; }
       nav ul.show { display: flex; flex-direction: column; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,18,36,0.98); align-items: center; justify-content: center; gap: 36px; z-index: 800; }
       nav ul.show li a { font-size: 1rem; letter-spacing: 0.2em; }
@@ -520,7 +520,7 @@
 
     @media (max-width: 480px) {
       .hero { padding: 60px 20px 72px; }
-      .hero-eyebrow::before, .hero-eyebrow::after { display: none; }
+      .hero-eyebrow::before, .hero-eyebrow::after { opacity: 0.6; }
     }
 
     /* ── PRICING GRID ── */
@@ -617,7 +617,7 @@
     .nav-dropdown { position: relative; }
     .nav-dropdown > a { cursor: default; }
     .dropdown-menu {
-      display: none;
+      opacity: 0; visibility: hidden; transition: opacity 0.2s, visibility 0s linear 1.2s;
       position: absolute;
       top: 100%;
       left: 50%;
@@ -630,7 +630,7 @@
       padding: 16px 0 8px;
     }
     .nav-dropdown:hover .dropdown-menu,
-    .nav-dropdown.open .dropdown-menu { display: block; }
+    .nav-dropdown.open .dropdown-menu { opacity: 1; visibility: visible; transition: opacity 0.2s, visibility 0s; }
     .dropdown-menu a {
       display: block;
       padding: 12px 24px;
