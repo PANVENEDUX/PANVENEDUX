@@ -651,6 +651,103 @@
       vertical-align: middle;
       opacity: 0.6;
     }
+  
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      /* Dropdown: full-width, static, no float */
+      .nav-dropdown { position: static; }
+      .dropdown-menu {
+        position: static;
+        transform: none;
+        left: auto;
+        min-width: 100%;
+        width: 100%;
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+        padding: 0;
+        margin-top: 4px;
+        backdrop-filter: none;
+        background: rgba(0,24,48,0.95);
+      }
+      .dropdown-menu a {
+        padding: 14px 24px;
+        font-size: 0.7rem;
+        white-space: normal;
+      }
+      .hero h1 {
+        font-size: clamp(2rem, 10vw, 3rem);
+        line-height: 1.15;
+      }
+      .hero-sub {
+        font-size: 0.82rem;
+        line-height: 1.8;
+        padding: 0 8px;
+      }
+      .hero-eyebrow {
+        font-size: 0.6rem;
+        letter-spacing: 0.2em;
+      }
+      .hero-eyebrow::before,
+      .hero-eyebrow::after { display: none; }
+      .hero-ctas {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+      .hero-cta {
+        width: 100%;
+        justify-content: center;
+        padding: 16px 24px;
+      }
+      .hero-cta-ghost {
+        font-size: 0.68rem;
+      }
+      .intro-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 0 4px;
+      }
+      .intro-heading {
+        font-size: clamp(1.6rem, 6vw, 2.4rem);
+      }
+      .pillars-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .pillar {
+        padding: 0 4px;
+      }
+      .pillar-number {
+        font-size: 2rem;
+      }
+      .section-header h2,
+      .intro-heading {
+        font-size: clamp(1.6rem, 7vw, 2.4rem);
+      }
+      .quote-band {
+        padding: 48px 24px;
+      }
+      .quote-band blockquote p {
+        font-size: clamp(1.3rem, 5vw, 2rem);
+      }
+      .cta-section .cta-inner {
+        padding: 0 8px;
+      }
+      .cta-inner h2 {
+        font-size: clamp(1.6rem, 7vw, 2.4rem);
+      }
+      .btn-primary {
+        width: 100%;
+        justify-content: center;
+        padding: 18px 24px;
+      }
+      .intro { padding: 56px 24px; }
+      .pillars { padding: 56px 24px; }
+      .cta-section { padding: 64px 24px; }
+      footer { padding: 48px 24px; text-align: center; }
+    }
+
   </style>
 </head>
 <body>
