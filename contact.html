@@ -181,6 +181,7 @@
       /* Dropdown: centered, static, no overflow */
       .nav-dropdown { position: relative; text-align: center; }
       .dropdown-menu {
+        display: none !important;
         position: static;
         transform: none;
         left: auto;
@@ -191,6 +192,11 @@
         background: transparent;
         backdrop-filter: none;
         box-shadow: none;
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+      .nav-dropdown.open .dropdown-menu {
+        display: block !important;
       }
       .dropdown-menu a {
         padding: 10px 20px;
