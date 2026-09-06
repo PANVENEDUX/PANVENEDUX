@@ -178,6 +178,27 @@
   
     /* ── MOBILE ── */
     @media (max-width: 768px) {
+      /* Dropdown: full-width, static, no float */
+      .nav-dropdown { position: static; }
+      .dropdown-menu {
+        position: static;
+        transform: none;
+        left: auto;
+        min-width: 100%;
+        width: 100%;
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+        padding: 0;
+        margin-top: 4px;
+        backdrop-filter: none;
+        background: rgba(0,24,48,0.95);
+      }
+      .dropdown-menu a {
+        padding: 14px 24px;
+        font-size: 0.7rem;
+        white-space: normal;
+      }
       .hero h1 {
         font-size: clamp(2rem, 10vw, 3rem);
         line-height: 1.15;
