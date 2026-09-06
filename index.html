@@ -323,6 +323,27 @@
 
     .hero-cta:hover svg { transform: translateX(4px); }
 
+    .hero-ctas {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .hero-cta-ghost {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-weight: 400;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding-bottom: 2px;
+      transition: color 0.3s, border-color 0.3s;
+    }
+    .hero-cta-ghost:hover { color: var(--gold-light); border-color: var(--gold); }
+
     .hero-scroll {
       position: absolute;
       bottom: 42px;
@@ -1199,15 +1220,18 @@
       <div class="hero-line"></div>
 
       <div class="hero-content">
-        <span class="hero-eyebrow">Strategic Consultancy</span>
-        <h1>Weaving <em>heritage</em> and precision into<br>sustainable business growth</h1>
-        <p class="hero-sub">We partner with organisations seeking clarity, integrity, and long-term value — translating complexity into decisive strategy.</p>
-        <a href="about.html" class="hero-cta">
-          <span>Discover Our Approach</span>
-          <svg width="16" height="10" viewBox="0 0 16 10" fill="none">
-            <path d="M0 5h14M10 1l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
+        <span class="hero-eyebrow">Strategic Advisory &nbsp;·&nbsp; Business Owners &amp; Executives</span>
+        <h1>The advisor who stays<br>in the room — from decision<br>to <em>outcome</em></h1>
+        <p class="hero-sub">PANVENEDUX works with business owners and leaders navigating the decisions that define their organisation. Strategy, governance, communications — and the preparation to deliver it in public.</p>
+        <div class="hero-ctas">
+          <a href="https://calendly.com/panvenedux/30min" target="_blank" rel="noopener" class="hero-cta">
+            <span>Book a Discovery Call</span>
+            <svg width="16" height="10" viewBox="0 0 16 10" fill="none">
+              <path d="M0 5h14M10 1l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="about.html" class="hero-cta-ghost">Our Story</a>
+        </div>
       </div>
 
       <div class="hero-scroll">
@@ -1228,8 +1252,8 @@
         <div class="intro-left reveal">
           <span class="intro-label">Who We Are</span>
           <h2 class="intro-heading">
-            A consultancy built on<br>
-            <strong>legacy &amp; conviction</strong>
+            A senior advisor —<br>
+            <strong>present through every stage</strong>
           </h2>
           <a href="about.html" class="btn-primary">
             <span>Learn More</span>
@@ -1239,9 +1263,9 @@
           </a>
         </div>
         <div class="intro-body reveal">
-          <p><strong style="color:var(--text); font-weight:600;">PANVENEDUX</strong> is a consultancy that merges legacy with modernity. We bring together analytical rigour and a deep understanding of market forces to build strategies that perform where it matters — in practice.</p>
-          <p>Our work is grounded in a clear understanding of internal structures, market dynamics, and real-world client needs. Every engagement is shaped by the belief that integrity is not a differentiator — it is a baseline.</p>
-          <p>We are a long-term ally for organisations that seek sustainable development, lasting value, and a partner they can trust without reservation.</p>
+          <p><strong style="color:var(--text); font-weight:600;">Mario Pokrovski</strong> has advised business owners, executives, and public figures across finance, defence, entertainment, and international policy — in boardrooms, on stage, and behind the scenes at events including the Venice Film Festival, Cannes, BAFTA, and the 10th Anniversary of the Invictus Games.</p>
+          <p>PANVENEDUX works with a small number of clients at any one time. Every engagement is personal, senior-level, and built around your specific situation — not a framework, not a junior team, not a report handed over and forgotten.</p>
+          <p>We are a long-term ally for organisations that seek clarity, resilience, and a partner they can trust without reservation.</p>
         </div>
       </div>
     </section>
@@ -1250,26 +1274,26 @@
     <section class="pillars">
       <div class="pillars-inner">
         <div class="section-header reveal">
-          <span class="intro-label">Our Principles</span>
-          <h2>What defines every engagement</h2>
+          <span class="intro-label">What We Do</span>
+          <h2>Three areas of <em>engagement</em></h2>
         </div>
         <div class="pillars-grid">
           <div class="pillar reveal">
             <div class="pillar-number">01</div>
-            <h3>Analytical Clarity</h3>
-            <p>We cut through complexity to surface the decisions and dynamics that genuinely determine outcomes — not the noise that surrounds them.</p>
+            <h3>Strategic Advisory</h3>
+            <p>For business owners navigating mergers, restructures, leadership transitions, and market entry — we work at the level of governance, decision architecture, and organisational design.</p>
             <div class="pillar-bar"></div>
           </div>
           <div class="pillar reveal">
             <div class="pillar-number">02</div>
-            <h3>Structural Integrity</h3>
-            <p>Every strategy we build is designed to hold — across cycles, across leadership changes, across the friction of real implementation.</p>
+            <h3>Communications &amp; Positioning</h3>
+            <p>Precise strategy for how you communicate — to investors, media, partners, and the public. Includes expert preparation for high-stakes speeches, keynotes, and public appearances.</p>
             <div class="pillar-bar"></div>
           </div>
           <div class="pillar reveal">
             <div class="pillar-number">03</div>
-            <h3>Long-Term Partnership</h3>
-            <p>We do not hand over reports. We stay in the room — present through transformation, accountable to outcomes, invested in your growth.</p>
+            <h3>End-to-End Partnership</h3>
+            <p>We do not hand over reports. We stay in the room — present through the full arc of transformation, accountable to outcomes, invested in your organisation's resilience.</p>
             <div class="pillar-bar"></div>
           </div>
         </div>
@@ -1279,8 +1303,8 @@
     <!-- QUOTE -->
     <div class="quote-band reveal">
       <blockquote>
-        <p>"Integrity and analytical clarity are not extras — they are the foundation of every partnership."</p>
-        <cite>PANVENEDUX</cite>
+        <p>"The preparation that matters is done before you stand up — whether in the boardroom or on stage."</p>
+        <cite>Mario Pokrovski, PANVENEDUX</cite>
       </blockquote>
     </div>
 
@@ -1288,14 +1312,17 @@
     <section class="cta-section">
       <div class="cta-inner reveal">
         <span class="intro-label">Begin the Conversation</span>
-        <h2>Ready to build something that lasts?</h2>
-        <p>Whether you are navigating a transition, seeking strategic clarity, or looking for a trusted long-term partner — we would like to hear from you.</p>
-        <a href="contact.html" class="btn-primary">
-          <span>Get in Touch</span>
-          <svg width="14" height="9" viewBox="0 0 14 9" fill="none">
-            <path d="M0 4.5h12M8.5 1l3.5 3.5-3.5 3.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
+        <h2>Most engagements begin with<br>a single <em>conversation</em></h2>
+        <p>Book a 30-minute discovery call. We will tell you clearly whether the work is the right fit — and if it is not, we will say so.</p>
+        <div style="display:flex;align-items:center;gap:28px;justify-content:center;flex-wrap:wrap;margin-top:8px;">
+          <a href="https://calendly.com/panvenedux/30min" target="_blank" rel="noopener" class="btn-primary">
+            <span>Book a Discovery Call</span>
+            <svg width="14" height="9" viewBox="0 0 14 9" fill="none">
+              <path d="M0 4.5h12M8.5 1l3.5 3.5-3.5 3.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="contact.html" style="font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-muted);border-bottom:1px solid var(--text-muted);padding-bottom:2px;text-decoration:none;transition:color 0.3s,border-color 0.3s;" onmouseover="this.style.color='var(--gold)';this.style.borderColor='var(--gold)'" onmouseout="this.style.color='var(--text-muted)';this.style.borderColor='var(--text-muted)'">Send a Message</a>
+        </div>
       </div>
     </section>
 
