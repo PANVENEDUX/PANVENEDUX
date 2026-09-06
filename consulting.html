@@ -605,27 +605,28 @@
   
     /* ── MOBILE ── */
     @media (max-width: 768px) {
-      /* Dropdown: full-width, static, no float */
-      .nav-dropdown { position: static; }
+      /* Dropdown: centered, static, no overflow */
+      .nav-dropdown { position: relative; text-align: center; }
       .dropdown-menu {
         position: static;
         transform: none;
         left: auto;
-        min-width: 100%;
-        width: 100%;
-        border-left: none;
-        border-right: none;
-        border-radius: 0;
-        padding: 0;
-        margin-top: 4px;
+        min-width: unset;
+        width: auto;
+        padding: 8px 0 0;
+        border: none;
+        background: transparent;
         backdrop-filter: none;
-        background: rgba(0,24,48,0.95);
+        box-shadow: none;
       }
       .dropdown-menu a {
-        padding: 14px 24px;
-        font-size: 0.7rem;
+        padding: 10px 20px;
+        font-size: 0.75rem;
         white-space: normal;
+        text-align: center;
+        color: rgba(255,255,255,0.6) !important;
       }
+      .dropdown-menu a:hover { background: transparent; }
       .hero h1 {
         font-size: clamp(2rem, 10vw, 3rem);
         line-height: 1.15;
