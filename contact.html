@@ -337,6 +337,7 @@
     <a class="contact-email" href="mailto:info@panvenedux.com">info@panvenedux.com</a>
     <form action="https://formspree.io/f/mnnpdllg" method="POST">
       <input type="hidden" name="_subject" value="New message from PANVENEDUX website" />
+      <input type="hidden" name="_next" value="https://panvenedux.com/thank-you.html" />
       <div class="form-group">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required />
@@ -428,5 +429,43 @@
       }
     });
   </script>
+
+<script>
+  /* ── Lead tracking ── */
+  document.addEventListener("DOMContentLoaded", function() {
+    function gtagSafe(eventName, params) {
+      if (typeof gtag === "function") { gtag("event", eventName, params); }
+    }
+
+    // Email link clicks
+    document.querySelectorAll("a[href^="mailto:"]").forEach(function(el) {
+      el.addEventListener("click", function() {
+        gtagSafe("email_click", { lead_source: "email_link" });
+      });
+    });
+
+    // Phone link clicks
+    document.querySelectorAll("a[href^="tel:"]").forEach(function(el) {
+      el.addEventListener("click", function() {
+        gtagSafe("phone_click", { lead_source: "phone_link" });
+      });
+    });
+
+    // Calendly booking button clicks
+    document.querySelectorAll("a[href*="calendly.com"]").forEach(function(el) {
+      el.addEventListener("click", function() {
+        gtagSafe("generate_lead", { lead_source: "calendly_" + (el.href.indexOf("full-package") > -1 ? "full_package" : "30min") });
+      });
+    });
+
+    // Contact form submission backup (in case redirect fails)
+    var form = document.querySelector("form[action*="formspree"]");
+    if (form) {
+      form.addEventListener("submit", function() {
+        gtagSafe("generate_lead", { lead_source: "contact_form" });
+      });
+    }
+  });
+</script>
 </body>
 </html>
