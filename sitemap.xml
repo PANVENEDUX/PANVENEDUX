@@ -4,6 +4,7 @@
 
   <url>
     <loc>https://panvenedux.com/</loc>
+    <lastmod>2026-09-29</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://panvenedux.com/"/>
     <xhtml:link rel="alternate" hreflang="bg" href="https://panvenedux.com/index-bg.html"/>
     <changefreq>monthly</changefreq>
@@ -12,6 +13,7 @@
 
   <url>
     <loc>https://panvenedux.com/index-bg.html</loc>
+    <lastmod>2026-09-29</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://panvenedux.com/"/>
     <xhtml:link rel="alternate" hreflang="bg" href="https://panvenedux.com/index-bg.html"/>
     <changefreq>monthly</changefreq>
@@ -20,6 +22,7 @@
 
   <url>
     <loc>https://panvenedux.com/about.html</loc>
+    <lastmod>2026-09-29</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://panvenedux.com/about.html"/>
     <xhtml:link rel="alternate" hreflang="bg" href="https://panvenedux.com/about-bg.html"/>
     <changefreq>monthly</changefreq>
@@ -28,6 +31,7 @@
 
   <url>
     <loc>https://panvenedux.com/about-bg.html</loc>
+    <lastmod>2026-09-29</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://panvenedux.com/about.html"/>
     <xhtml:link rel="alternate" hreflang="bg" href="https://panvenedux.com/about-bg.html"/>
     <changefreq>monthly</changefreq>
@@ -36,6 +40,7 @@
 
   <url>
     <loc>https://panvenedux.com/services.html</loc>
+    <lastmod>2026-09-29</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://panvenedux.com/services.html"/>
     <xhtml:link rel="alternate" hreflang="bg" href="https://panvenedux.com/services-bg.html"/>
     <changefreq>monthly</changefreq>
@@ -44,6 +49,7 @@
 
   <url>
     <loc>https://panvenedux.com/services-bg.html</loc>
+    <lastmod>2026-09-29</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://panvenedux.com/services.html"/>
     <xhtml:link rel="alternate" hreflang="bg" href="https://panvenedux.com/services-bg.html"/>
     <changefreq>monthly</changefreq>
@@ -52,6 +58,7 @@
 
   <url>
     <loc>https://panvenedux.com/contact.html</loc>
+    <lastmod>2026-09-29</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://panvenedux.com/contact.html"/>
     <xhtml:link rel="alternate" hreflang="bg" href="https://panvenedux.com/contact-bg.html"/>
     <changefreq>yearly</changefreq>
@@ -60,6 +67,7 @@
 
   <url>
     <loc>https://panvenedux.com/contact-bg.html</loc>
+    <lastmod>2026-09-29</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://panvenedux.com/contact.html"/>
     <xhtml:link rel="alternate" hreflang="bg" href="https://panvenedux.com/contact-bg.html"/>
     <changefreq>yearly</changefreq>
@@ -68,6 +76,7 @@
 
   <url>
     <loc>https://panvenedux.com/london.html</loc>
+    <lastmod>2026-09-29</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://panvenedux.com/london.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -75,6 +84,7 @@
 
   <url>
     <loc>https://panvenedux.com/consulting.html</loc>
+    <lastmod>2026-09-29</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://panvenedux.com/consulting.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -82,6 +92,7 @@
 
   <url>
     <loc>https://panvenedux.com/privacy.html</loc>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
