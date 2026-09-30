@@ -462,6 +462,8 @@
       padding: 44px 36px;
       text-align: left;
       background: white;
+      display: flex;
+      flex-direction: column;
     }
 
     .price-card.featured {
@@ -517,6 +519,35 @@
     }
 
     .price-card.featured p { color: rgba(255,255,255,0.55); }
+
+    .price-includes {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 36px;
+      flex: 1;
+    }
+
+    .price-includes li {
+      font-size: 0.8rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+      padding: 7px 0 7px 18px;
+      position: relative;
+      border-bottom: 1px solid rgba(201,168,76,0.12);
+    }
+
+    .price-includes li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 50%;
+      width: 7px; height: 1px;
+      background: var(--gold);
+    }
+
+    .price-card.featured .price-includes li {
+      color: rgba(255,255,255,0.55);
+      border-bottom-color: rgba(255,255,255,0.07);
+    }
 
     .price-card .cta-btn { display: inline-block; }
 
@@ -876,9 +907,12 @@
         <h3>Focused Consultation</h3>
         <div class="price-amount">€200</div>
         <div class="price-unit">per hour</div>
-        <p>
-          A structured session to pressure-test a decision, map a problem, or establish a point of view before committing to a course of action.
-        </p>
+        <ul class="price-includes">
+          <li>Pressure-test a decision or map a problem</li>
+          <li>Establish a point of view before acting</li>
+          <li>Single session, no retainer required</li>
+          <li>Confirmation by return</li>
+        </ul>
         <a href="https://calendly.com/panvenedux/30min" target="_blank" rel="noopener" class="cta-btn">Book a Session</a>
       </div>
 
@@ -887,9 +921,12 @@
         <h3>30-Minute Call</h3>
         <div class="price-amount">Free</div>
         <div class="price-unit">no cost, no commitment</div>
-        <p>
-          Not sure where to start? Book a free 30-minute call to discuss your situation and understand whether this is the right engagement for you.
-        </p>
+        <ul class="price-includes">
+          <li>Discuss your situation and priorities</li>
+          <li>Understand whether this is the right engagement</li>
+          <li>Get a clear sense of the work involved</li>
+          <li>No obligation to proceed</li>
+        </ul>
         <a href="https://calendly.com/panvenedux/new-meeting" target="_blank" rel="noopener" class="cta-btn">Book a Free 30-min Call</a>
       </div>
     </div>
