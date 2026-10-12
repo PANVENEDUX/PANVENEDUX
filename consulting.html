@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Strategic Business Consulting from €200 | PANVENEDUX</title>
+  <title>Business Strategy Consultant, London &amp; UK | PANVENEDUX</title>
   <meta name="description" content="Advisory for mergers, restructures, leadership transitions and market entry. Strategy, governance and decision architecture. Sessions from €200, book online." />
   <link rel="alternate" hreflang="en" href="https://panvenedux.com/consulting.html" />
   <link rel="canonical" href="https://panvenedux.com/consulting.html" />
@@ -740,13 +740,13 @@
   </style>
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://panvenedux.com/consulting.html" />
-  <meta property="og:title" content="Strategic Business Consulting from €200 | PANVENEDUX" />
+  <meta property="og:title" content="Business Strategy Consultant, London &amp; UK | PANVENEDUX" />
   <meta property="og:description" content="Advisory for mergers, restructures, leadership transitions and market entry. Strategy, governance and decision architecture. Sessions from €200, book online." />
   <meta property="og:image" content="https://panvenedux.com/og-image.jpg" />
   <meta property="og:locale" content="en_GB" />
   <meta property="og:site_name" content="PANVENEDUX" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Strategic Business Consulting from €200 | PANVENEDUX" />
+  <meta name="twitter:title" content="Business Strategy Consultant, London &amp; UK | PANVENEDUX" />
   <meta name="twitter:description" content="Advisory for mergers, restructures, leadership transitions and market entry. Strategy, governance and decision architecture. Sessions from €200, book online." />
   <meta name="twitter:image" content="https://panvenedux.com/og-image.jpg" />
   <script type="application/ld+json">
@@ -813,7 +813,8 @@
     <p class="hero-sub">
       For leaders navigating inflection points — a merger, a restructure, a leadership transition, a market entry. We work at the level of strategy, governance, and decision architecture.
     </p>
-    <a href="/contact.html" class="cta-btn">Start the Conversation</a>
+    <a href="https://calendly.com/panvenedux/new-meeting" target="_blank" rel="noopener" class="cta-btn">Book a Free 30-Min Call</a>
+    <p class="hero-sub" style="margin-top:20px;font-size:0.85rem;">Working with clients in London, across the UK and Europe &nbsp;·&nbsp; Call <a href="tel:+447498982822" style="color:#C9A84C;text-decoration:none;white-space:nowrap;">+44 7498 982822</a></p>
   </div>
 </section>
 
@@ -940,7 +941,8 @@
 
 <!-- ── FOOTER ── -->
 <footer class="lp-footer">
-  <p>&copy; 2025 PANVENEDUX. All rights reserved.</p>
+  <p>&copy; 2026 PANVENEDUX. All rights reserved.</p>
+  <p>Tel: <a href="tel:+447498982822">+44 7498 982822</a></p>
   <p><a href="/privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="/privacy.html#cookies">Cookie Policy</a> &nbsp;·&nbsp; <a href="/contact.html">Contact</a></p>
 </footer>
 
@@ -1032,7 +1034,7 @@
     // Calendly booking button clicks
     document.querySelectorAll("a[href*="calendly.com"]").forEach(function(el) {
       el.addEventListener("click", function() {
-        gtagSafe("generate_lead", { lead_source: "calendly_" + (el.href.indexOf("full-package") > -1 ? "full_package" : "30min") });
+        gtagSafe("booking_click", { lead_source: "calendly_" + (el.href.indexOf("full-package") > -1 ? "full_package" : "30min") });
       });
     });
 

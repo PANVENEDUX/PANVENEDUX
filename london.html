@@ -940,7 +940,8 @@
 
   <!-- Minimal footer — no site navigation -->
   <footer class="lp-footer">
-    <p>&copy; 2025 PANVENEDUX. All rights reserved.</p>
+    <p>&copy; 2026 PANVENEDUX. All rights reserved.</p>
+  <p>Tel: <a href="tel:+447498982822">+44 7498 982822</a></p>
     <p>Questions? <a href="mailto:info@panvenedux.com">info@panvenedux.com</a></p>
     <p style="margin-top:10px;"><a href="/privacy.html">Privacy Policy</a></p>
   </footer>
@@ -1031,7 +1032,7 @@
     // Calendly booking button clicks
     document.querySelectorAll("a[href*="calendly.com"]").forEach(function(el) {
       el.addEventListener("click", function() {
-        gtagSafe("generate_lead", { lead_source: "calendly_" + (el.href.indexOf("full-package") > -1 ? "full_package" : "30min") });
+        gtagSafe("booking_click", { lead_source: "calendly_" + (el.href.indexOf("full-package") > -1 ? "full_package" : "30min") });
       });
     });
 

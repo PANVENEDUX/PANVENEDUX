@@ -369,7 +369,8 @@
 
 <footer>
   <div class="footer-logo">PANVENEDUX</div>
-  <p>&copy; 2025 PANVENEDUX. All rights reserved.</p>
+  <p>&copy; 2026 PANVENEDUX. All rights reserved.</p>
+  <p>Tel: <a href="tel:+447498982822">+44 7498 982822</a></p>
   <p>Email: <a href="mailto:info@panvenedux.com">info@panvenedux.com</a></p>
   <p class="language-switch-footer"><a href="about.html">English</a> &nbsp;|&nbsp; <a href="about-bg.html">&#1041;&#1098;&#1083;&#1075;&#1072;&#1088;&#1089;&#1082;&#1080;</a></p>
 <p><a href="/privacy.html">Privacy Policy</a></p>
@@ -444,7 +445,7 @@
     // Calendly booking button clicks
     document.querySelectorAll("a[href*="calendly.com"]").forEach(function(el) {
       el.addEventListener("click", function() {
-        gtagSafe("generate_lead", { lead_source: "calendly_" + (el.href.indexOf("full-package") > -1 ? "full_package" : "30min") });
+        gtagSafe("booking_click", { lead_source: "calendly_" + (el.href.indexOf("full-package") > -1 ? "full_package" : "30min") });
       });
     });
 
