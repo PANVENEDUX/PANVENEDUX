@@ -337,6 +337,7 @@
   <div class="contact-inner reveal">
     <p class="contact-intro">If you'd like to discuss a potential collaboration or have a question, feel free to write to us directly or via the form below:</p>
     <a class="contact-email" href="mailto:info@panvenedux.com">info@panvenedux.com</a>
+    <a class="contact-email" href="tel:+447498982822">+44 7498 982822</a>
     <form action="https://formspree.io/f/mnnpdllg" method="POST">
       <input type="hidden" name="_subject" value="New message from PANVENEDUX website" />
       <input type="hidden" name="_next" value="https://panvenedux.com/thank-you.html" />
@@ -381,7 +382,8 @@
 
 <footer>
   <div class="footer-logo">PANVENEDUX</div>
-  <p>&copy; 2025 PANVENEDUX. All rights reserved.</p>
+  <p>&copy; 2026 PANVENEDUX. All rights reserved.</p>
+  <p>Tel: <a href="tel:+447498982822">+44 7498 982822</a></p>
   <p>Email: <a href="mailto:info@panvenedux.com">info@panvenedux.com</a></p>
   <p class="language-switch-footer"><a href="contact.html">English</a> &nbsp;|&nbsp; <a href="contact-bg.html">&#1041;&#1098;&#1083;&#1075;&#1072;&#1088;&#1089;&#1082;&#1080;</a></p>
 <p><a href="/privacy.html">Privacy Policy</a></p>
@@ -456,7 +458,7 @@
     // Calendly booking button clicks
     document.querySelectorAll("a[href*="calendly.com"]").forEach(function(el) {
       el.addEventListener("click", function() {
-        gtagSafe("generate_lead", { lead_source: "calendly_" + (el.href.indexOf("full-package") > -1 ? "full_package" : "30min") });
+        gtagSafe("booking_click", { lead_source: "calendly_" + (el.href.indexOf("full-package") > -1 ? "full_package" : "30min") });
       });
     });
 
