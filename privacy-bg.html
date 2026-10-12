@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Политика за поверителност | PANVENEDUX</title>
   <link rel="canonical" href="https://panvenedux.com/privacy-bg.html" />
+  <!-- Google Consent Mode v2: everything denied until the visitor accepts -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    (function () {
+      var c = null;
+      try { c = localStorage.getItem('cookieConsent') || (localStorage.getItem('cookie_accepted') === '1' ? 'accepted' : null); } catch (e) {}
+      var v = c === 'accepted' ? 'granted' : 'denied';
+      gtag('consent', 'default', { ad_storage: v, analytics_storage: v, ad_user_data: v, ad_personalization: v, wait_for_update: 500 });
+      gtag('set', 'ads_data_redaction', true);
+      gtag('set', 'url_passthrough', true);
+    })();
+  </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FSSMM2HVX2"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FSSMM2HVX2');</script>
   <style>
@@ -55,5 +68,14 @@
       </p>
     </div>
   </footer>
+<script>
+  /* Consent Mode v2: pass the visitor's cookie choice to Google */
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest && e.target.closest('[id^="accept-cookies"], [id^="decline-cookies"]');
+    if (!t || typeof gtag !== 'function') return;
+    var v = t.id.indexOf('accept') === 0 ? 'granted' : 'denied';
+    gtag('consent', 'update', { ad_storage: v, analytics_storage: v, ad_user_data: v, ad_personalization: v });
+  });
+</script>
 </body>
 </html>

@@ -9,6 +9,19 @@
   <link rel="canonical" href="https://panvenedux.com/london.html" />
 
   <!-- GA4 -->
+  <!-- Google Consent Mode v2: everything denied until the visitor accepts -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    (function () {
+      var c = null;
+      try { c = localStorage.getItem('cookieConsent') || (localStorage.getItem('cookie_accepted') === '1' ? 'accepted' : null); } catch (e) {}
+      var v = c === 'accepted' ? 'granted' : 'denied';
+      gtag('consent', 'default', { ad_storage: v, analytics_storage: v, ad_user_data: v, ad_personalization: v, wait_for_update: 500 });
+      gtag('set', 'ads_data_redaction', true);
+      gtag('set', 'url_passthrough', true);
+    })();
+  </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FSSMM2HVX2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -970,15 +983,15 @@
   <script>
     (function() {
       var banner = document.getElementById('cookie-banner-lp');
-      if (!localStorage.getItem('cookie-consent')) {
+      if (!localStorage.getItem('cookieConsent')) {
         banner.style.display = 'flex';
       }
       document.getElementById('accept-cookies-lp').addEventListener('click', function() {
-        localStorage.setItem('cookie-consent', 'accepted');
+        localStorage.setItem('cookieConsent', 'accepted');
         banner.style.display = 'none';
       });
       document.getElementById('decline-cookies-lp').addEventListener('click', function() {
-        localStorage.setItem('cookie-consent', 'declined');
+        localStorage.setItem('cookieConsent', 'declined');
         banner.style.display = 'none';
       });
     })();
@@ -988,15 +1001,17 @@
     document.querySelectorAll('.nav-dropdown').forEach(function(dropdown) {
       var timer;
       dropdown.addEventListener('mouseenter', function() {
+        if (window.innerWidth <= 768) return; /* phones: tap toggles instead */
         clearTimeout(timer);
         dropdown.classList.add('open');
       });
       dropdown.addEventListener('mouseleave', function() {
+        if (window.innerWidth <= 768) return;
         timer = setTimeout(function() {
           dropdown.classList.remove('open');
         }, 1200);
       });
-      var link = dropdown.querySelector('> a');
+      var link = dropdown.querySelector(':scope > a');
       if (link) {
         link.addEventListener('click', function(e) {
           if (window.innerWidth <= 768) {
@@ -1016,33 +1031,42 @@
     }
 
     // Email link clicks
-    document.querySelectorAll("a[href^="mailto:"]").forEach(function(el) {
+    document.querySelectorAll("a[href^='mailto:']").forEach(function(el) {
       el.addEventListener("click", function() {
         gtagSafe("email_click", { lead_source: "email_link" });
       });
     });
 
     // Phone link clicks
-    document.querySelectorAll("a[href^="tel:"]").forEach(function(el) {
+    document.querySelectorAll("a[href^='tel:']").forEach(function(el) {
       el.addEventListener("click", function() {
         gtagSafe("phone_click", { lead_source: "phone_link" });
       });
     });
 
     // Calendly booking button clicks
-    document.querySelectorAll("a[href*="calendly.com"]").forEach(function(el) {
+    document.querySelectorAll("a[href*='calendly.com']").forEach(function(el) {
       el.addEventListener("click", function() {
         gtagSafe("booking_click", { lead_source: "calendly_" + (el.href.indexOf("full-package") > -1 ? "full_package" : "30min") });
       });
     });
 
     // Contact form submission backup (in case redirect fails)
-    var form = document.querySelector("form[action*="formspree"]");
+    var form = document.querySelector("form[action*='formspree']");
     if (form) {
       form.addEventListener("submit", function() {
         gtagSafe("generate_lead", { lead_source: "contact_form" });
       });
     }
+  });
+</script>
+<script>
+  /* Consent Mode v2: pass the visitor's cookie choice to Google */
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest && e.target.closest('[id^="accept-cookies"], [id^="decline-cookies"]');
+    if (!t || typeof gtag !== 'function') return;
+    var v = t.id.indexOf('accept') === 0 ? 'granted' : 'denied';
+    gtag('consent', 'update', { ad_storage: v, analytics_storage: v, ad_user_data: v, ad_personalization: v });
   });
 </script>
 </body>
