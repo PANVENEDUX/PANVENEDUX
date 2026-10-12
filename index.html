@@ -148,6 +148,10 @@
       transition: all 0.3s;
     }
 
+    .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
     /* ── HERO ── */
     .hero {
       position: relative;
@@ -761,7 +765,7 @@
         align-items: center;
         justify-content: center;
         gap: 36px;
-        z-index: 800;
+        z-index: 950;
       }
 
       nav ul.show li a {
@@ -905,11 +909,14 @@
       }
       .pillars-grid {
         grid-template-columns: 1fr;
-        gap: 32px;
+        gap: 0;
+        background: transparent;
       }
       .pillar {
-        padding: 0 4px;
+        padding: 40px 24px;
+        border-bottom: 1px solid rgba(201,168,76,0.18);
       }
+      .pillar:last-child { border-bottom: none; }
       .pillar-number {
         font-size: 2rem;
       }
@@ -1470,8 +1477,18 @@
 
   <script>
     function toggleMenu() {
-      document.getElementById('nav-menu').classList.toggle('show');
+      const menu = document.getElementById('nav-menu');
+      const btn = document.querySelector('.hamburger');
+      const open = menu.classList.toggle('show');
+      btn.classList.toggle('open', open);
     }
+
+    document.querySelectorAll('#nav-menu a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        document.getElementById('nav-menu').classList.remove('show');
+        document.querySelector('.hamburger').classList.remove('open');
+      });
+    });
 
     // Header scroll effect
     const header = document.getElementById('site-header');
@@ -1488,7 +1505,7 @@
           observer.unobserve(e.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0 });
     revealEls.forEach(el => observer.observe(el));
 
     // Cookie consent

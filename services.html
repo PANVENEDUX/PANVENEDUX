@@ -42,6 +42,9 @@
     nav ul li a:hover::after, nav ul li a.active::after { width:100%; }
     .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:4px; background:none; border:none; }
     .hamburger span { display:block; width:24px; height:1.5px; background:white; transition:all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
     .page-hero { background:var(--navy); padding:160px 24px 80px; text-align:center; position:relative; overflow:hidden; }
     .page-hero::before { content:''; position:absolute; inset:0; background-image:linear-gradient(rgba(201,168,76,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,0.04) 1px,transparent 1px); background-size:60px 60px; }
     .page-hero-label { display:inline-block; font-size:0.68rem; letter-spacing:0.35em; text-transform:uppercase; color:var(--gold); margin-bottom:20px; position:relative; }
@@ -86,7 +89,7 @@
       .header-inner { padding:18px 24px; }
       nav ul { display:none; }
       .hamburger { display:flex; }
-      nav ul.show { display:flex; flex-direction:column; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,18,36,0.98); align-items:center; justify-content:center; gap:36px; z-index:800; }
+      nav ul.show { display:flex; flex-direction:column; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,18,36,0.98); align-items:center; justify-content:center; gap:36px; z-index:950; }
       nav ul.show li a { font-size:1rem; letter-spacing:0.2em; }
       .page-hero-label::before,.page-hero-label::after { display:none; }
       .cookie-banner { flex-direction:column; align-items:stretch; }
@@ -225,11 +228,14 @@
       }
       .pillars-grid {
         grid-template-columns: 1fr;
-        gap: 32px;
+        gap: 0;
+        background: transparent;
       }
       .pillar {
-        padding: 0 4px;
+        padding: 40px 24px;
+        border-bottom: 1px solid rgba(201,168,76,0.18);
       }
+      .pillar:last-child { border-bottom: none; }
       .pillar-number {
         font-size: 2rem;
       }
@@ -435,10 +441,11 @@
 </div>
 
 <script>
-  function toggleMenu(){document.getElementById('nav-menu').classList.toggle('show');}
+  function toggleMenu(){const m=document.getElementById('nav-menu');const b=document.querySelector('.hamburger');const o=m.classList.toggle('show');b.classList.toggle('open',o);}
+  document.querySelectorAll('#nav-menu a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('nav-menu').classList.remove('show');document.querySelector('.hamburger').classList.remove('open');});});
   const hdr=document.getElementById('site-header');
   window.addEventListener('scroll',()=>hdr.classList.toggle('scrolled',window.scrollY>60));
-  const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.12});
+  const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0});
   document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
   document.addEventListener('DOMContentLoaded',function(){
     const b=document.getElementById('cookie-banner');
